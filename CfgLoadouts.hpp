@@ -27,7 +27,7 @@ class CfgLoadouts {
 	#include "c\loadouts\blu_gear.hpp"
 	class potato_w 
 	{
-		#include "c\loadouts\PMC_USARMY.hpp"
+		#include "c\loadouts\west_germany.hpp"
 	};
 
 	// INDFOR

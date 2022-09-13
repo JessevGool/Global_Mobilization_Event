@@ -4,10 +4,10 @@
 
 // ------------------- PASTE BELOW THIS LINE
 // Camo set
-#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_80_oli", "gm_ge_army_uniform_soldier_80_ols", "gm_ge_army_uniform_soldier_gloves_80_ols"
+#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_win"
 #define CAMO_VEST "gm_ge_army_vest_80_rifleman"
 #define CAMO_BACKPACK "gm_dk_army_backpack_73_oli"
-#define CAMO_HEADGEAR "gm_ge_headgear_m62_net"
+#define CAMO_HEADGEAR "gm_ge_headgear_m62_cover_win","gm_ge_headgear_m62_win_pap_01"
 
 // Vehicle crew
 #define CREW_UNIFORM "gm_ge_army_uniform_crew_80_oli"
@@ -50,7 +50,7 @@
 
 // -------------------- PASTE ABOVE THIS LINE
 // HMG
-#define HMG "ace_cswCompatCUP_cup_m2"
+#define HMG "ace_csw_staticM2ShieldCarry"
 #define HMG_TRI_HI "ace_csw_m3CarryTripod"
 #define HMG_TRI_LO "ace_csw_m3CarryTripodLow"
 #define HMG_MAG "ace_csw_100Rnd_127x99_mag:3"
@@ -81,7 +81,7 @@
 #define LEADER_TOOLS BASE_LEADER_TOOLS, SIDE_KEY
 #define LINKED BASE_LINKED
 #define LEADER_LINKED BASE_LEADER_LINKED
-#define CARRYALL "UK3CB_B_Alice_Bedroll_K"
+#define CARRYALL "gm_dk_army_backpack_73_oli"
 #define GOG
 
 // Specialized Resupply Vehicle Loadouts
@@ -223,7 +223,7 @@ class aar : rifleman
   backpackItems[] += {AR_MAG};
   linkedItems[] += {BINOS};
 };
-class lat : Fic_Soldier_Carbine
+class lat : rifleman
 { // RAT
   magazines[] += {AT_MAG};
   launchers[] = {AT};
