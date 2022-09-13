@@ -82,7 +82,7 @@
 #define PISTOL "gm_p1_blk"
 #define PISTOL_MAG "gm_8Rnd_9x19mm_B_DM11_p1_blk:3"
 // Grenades
-#define LEADER_GRENADES BASE_FRAG, LEADER_SMOKES, SIDE_CHEM_LIGHT
+#define LEADER_GRENADES BASE_FRAG_BLU, LEADER_SMOKES_BLU, SIDE_CHEM_LIGHT
 // Gear
 #define TOOLS BASE_TOOLS
 #define LEADER_TOOLS BASE_LEADER_TOOLS, SIDE_KEY
@@ -171,7 +171,7 @@ class ftl : rifleman
 { // FTL
   vest[] = {CAMO_VEST_TL};
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, LEADER_GRENADES_BLU};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, LEADER_GRENADES};
   items[] += {LEADER_TOOLS, RADIO_SR};
   linkedItems[] += {LEADER_LINKED, BINOS};
 };
@@ -464,7 +464,7 @@ class eng : fic_eng
 class engl : eng
 { // Logistics Leader
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES_BLU};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED, BINOS};
   backpackItems[] += {RADIO_MR};

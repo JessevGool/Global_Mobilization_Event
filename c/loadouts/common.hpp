@@ -20,7 +20,7 @@
 #define BASE_GRENADES_OPF BASE_FRAG_OPF,BASE_SMOKES_OPF
 #define LEADER_SMOKES_BLU BASE_SMOKES_BLU,"gm_smokeshell_grn_dm21:2","gm_smokeshell_red_dm23:2"
 #define LEADER_SMOKES_OPF BASE_SMOKES_OPF,"gm_smokeshell_org_gc:2","gm_smokeshell_red_gc:2"
-#define MEDIC_GRENADES BASE_SMOKES_BLU,BASE_SMOKES_BLU,"gm_smokeshell_red_dm23:2"
+#define MEDIC_GRENADES_BLU BASE_SMOKES_BLU,BASE_SMOKES_BLU,"gm_smokeshell_red_dm23:2"
 #define MEDIC_GRENADES_OPF BASE_SMOKES_OPF,BASE_SMOKES_OPF,"gm_smokeshell_red_gc:2"
 #define CREW_GRENADES_BLU BASE_SMOKES_BLU,"gm_smokeshell_grn_dm21:2"
 #define CREW_GRENADES_OPF BASE_SMOKES_OPF,"gm_smokeshell_org_gc:2"

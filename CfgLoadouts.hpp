@@ -41,6 +41,6 @@ class CfgLoadouts {
 	#include "c\loadouts\opf_gear.hpp"
 	class potato_e 
 	{
-		#include "c\loadouts\east_germany.hpp"
+		//#include "c\loadouts\east_germany.hpp"
 	};
 };

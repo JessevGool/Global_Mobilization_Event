@@ -8,7 +8,7 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=4504;
+		nextID=4514;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=24;
+		nextID=30;
 	};
 	class Camera
 	{
-		pos[]={4129.5239,114.03072,13291.02};
-		dir[]={-0.22575335,-0.63783473,-0.73634875};
-		up[]={-0.18696158,0.77017224,-0.60982019};
-		aside[]={-0.95607966,1.4866237e-007,0.29312029};
+		pos[]={4133.3486,119.19003,13291.153};
+		dir[]={0.029836908,-0.66954672,-0.74218708};
+		up[]={0.026894679,0.74277472,-0.6690045};
+		aside[]={-0.99920613,2.2472068e-007,-0.040169023};
 	};
 };
 binarizationWanted=0;
@@ -70,14 +70,13 @@ addons[]=
 	"A3_Structures_F_Enoch_Military_Barracks",
 	"gm_structures_euro_80",
 	"gm_weapons_ammoboxes",
-	"A3_Structures_F_Mil_Helipads",
-	"gm_characters_pl_characters"
+	"A3_Structures_F_Mil_Helipads"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=37;
+		items=36;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -324,13 +323,6 @@ class AddonsMetaData
 		{
 			className="gm_weapons_ammoboxes";
 			name="gm_weapons_ammoboxes";
-			author="Global Mobilization";
-			url="global-mobilization.com";
-		};
-		class Item36
-		{
-			className="gm_characters_pl_characters";
-			name="gm_characters_pl_characters";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
@@ -4875,7 +4867,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=176;
+		items=175;
 		class Item0
 		{
 			dataType="Logic";
@@ -15656,12 +15648,11 @@ class Mission
 						rank="CAPTAIN";
 						name="BLU_COY";
 						description="Commander@COMPANY COMMAND";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=3847;
 					type="potato_w_coy";
-					atlOffset=0.00029754639;
+					atlOffset=0.00030517578;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15762,7 +15753,7 @@ class Mission
 			{
 			};
 			id=3846;
-			atlOffset=0.00029754639;
+			atlOffset=0.00030517578;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35339,52 +35330,6 @@ class Mission
 				};
 				nAttributes=1;
 			};
-		};
-		class Item175
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4127.7935,110.97056,13287.665};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=4502;
-					type="gm_gc_airforce_pilot_pm_80_blu";
-					atlOffset=-4.5776367e-005;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4127.1553,110.99453,13288.172};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=4503;
-					type="gm_pl_airforce_pilot_pm_80_gry";
-					atlOffset=-3.0517578e-005;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=4501;
-			atlOffset=-4.5776367e-005;
 		};
 	};
 };

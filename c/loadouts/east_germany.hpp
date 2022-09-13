@@ -96,7 +96,7 @@
 #define PISTOL "gm_pm_blk"
 #define PISTOL_MAG "gm_8Rnd_9x18mm_B_pst_pm_blk:3"
 // Grenades
-#define LEADER_GRENADES_OPF BASE_FRAG_OPF,LEADER_SMOKES_OPF,SIDE_CHEM_LIGHT
+#define LEADER_GRENADES BASE_FRAG_OPF,LEADER_SMOKES_OPF,SIDE_CHEM_LIGHT
 // Gear
 #define TOOLS BASE_TOOLS
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
@@ -175,7 +175,7 @@ class Fic_Soldier_Carbine: rifleman {// carbine-man
 class ftl: rifleman {// FTL
   vest[] = {CAMO_VEST_TL};
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES_OPF};
+  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
@@ -421,7 +421,7 @@ class eng: fic_eng {// Logistics Engineer
 };
 class engl: eng {// Logistics Leader
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES_OPF};
+  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
   backpackItems[] += {RADIO_MR};
