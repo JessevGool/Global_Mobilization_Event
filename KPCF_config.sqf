@@ -10,11 +10,11 @@
 
 // The Base object is for the player interaction, so at these object you can open the dialog
 KPCF_cratefillerBase = [
-    "Land_Cargo10_military_green_F"
+    "gm_ge_army_ammobox_everything_80"
 ];
 
 // The Spawn object is the point where crates will spawn and acts the center for the KPCF_spawnRadius
-KPCF_cratefillerSpawn = "Land_HelipadCivil_F";
+KPCF_cratefillerSpawn = "acex_intelitems_document";
 
 // This variable defines if the player will be able to spawn and delete crates
 KPCF_canSpawnAndDelete = true;
