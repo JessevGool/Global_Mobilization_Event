@@ -20,7 +20,7 @@ KPCF_cratefillerSpawn = "Land_HelipadCivil_F";
 KPCF_canSpawnAndDelete = true;
 
 // If set to "true" the item lists will be generated from the config
-KPCF_generateLists = true;
+KPCF_generateLists = false;
 
 // These variable defines the range where inventories can be edited
 // Example: With an setting of 10 all objects in a radius of 10m from the center of the spawn object can be edited
@@ -55,30 +55,40 @@ KPCF_whitelistedItems = [
 
 // Defines the available weapons
 KPCF_weapons = [
-    "arifle_SPAR_01_snd_F",
-    "MMG_01_tan_F"
+    "gm_g3a4_grn",
+    "gm_mg3_blk",
+    "gm_mp5a2_blk",
+    "gm_pzf44_2_oli",
+    "gm_p1_blk",
+    "gm_p2a1_blk"
 ];
 
 // Defines the available grenades
 KPCF_grenades = [
-    "HandGrenade",
-    "MiniGrenade"
+    "gm_handgrenade_frag_dm51",
+    "gm_smokeshell_red_gc",
+    "gm_smokeshell_grn_gc",
+    "gm_smokeshell_wht_gc"
 ];
 
 // Defines the available explosives
 KPCF_explosives = [
-    "DemoCharge_Remote_Mag",
-    "ATMine_Range_Mag"
+    "gm_explosive_plnp_charge",
+    "gm_explosive_petn_charge"
 ];
 
 // Defines the available items
 KPCF_items = [
-    "FirstAidKit",
-    "ToolKit"
+    "ACE_packingBandage",
+    "ACE_elasticBandage",
+    "ACE_epinephrine",
+    "ACE_salineIV_500",
+    "ACE_morphine",
+    "ACE_tourniquet",
+    "ACE_Splint"
 ];
 
 // Defines the available backpacks
 KPCF_backpacks = [
-    "B_FieldPack_cbr",
-    "B_AssaultPack_cbr"
+    "gm_ge_army_backpack_80_oli"
 ];

@@ -6,8 +6,14 @@
 // Camo set
 #define CAMO_UNIFORM "gm_ge_army_uniform_soldier_80_ols","gm_ge_army_uniform_soldier_gloves_80_ols","gm_ge_army_uniform_soldier_80_oli"
 #define SF_CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_win"
+
 #define CAMO_VEST "gm_ge_army_vest_80_rifleman"
-#define CAMO_BACKPACK "gm_dk_army_backpack_73_oli"
+#define CAMO_VEST_TL "gm_ge_army_vest_80_leader"
+#define CAMO_VEST_MG "gm_ge_army_vest_80_machinegunner"
+#define CAMO_VEST_CREW "gm_ge_army_vest_80_crew"
+#define CAMO_VEST_MEDIC "gm_ge_army_vest_80_medic"
+
+#define CAMO_BACKPACK "gm_ge_army_backpack_80_oli"
 #define CAMO_HEADGEAR "gm_ge_headgear_m62_cover_win","gm_ge_headgear_m62_win_pap_01"
 
 // Vehicle crew
@@ -16,13 +22,13 @@
 #define CREW_HELMET "gm_ge_headgear_crewhat_80_blk"
 // Rifle
 #define RIFLE "gm_g3a4_grn"
-#define RIFLE_MAG "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:8"
+#define RIFLE_MAG "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:4"
 #define RIFLE_ATTACHMENTS ""
 #define AR_ATTACHMENTS RIFLE_ATTACHMENTS, ""
 #define ALT_OPTICS "optic_Aco", "CUP_optic_CompM2_Black", "CUP_optic_TrijiconRx01_black", "CUP_optic_MRad", STANAG_OPTICS, WARSAW_OPTICS
 // GL Rifle
 #define GLRIFLE "gm_g3a4_grn"
-#define GLRIFLE_MAG "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:8"
+#define GLRIFLE_MAG "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:4"
 
 // Grenadier uses a rifle fired grenade, which means no flares or smokes
 #define GLRIFLE_MAG_FLARE ""
@@ -30,7 +36,7 @@
 #define GLRIFLE_MAG_HE "gm_1rnd_67mm_heat_dm22a1_g3"
 // Carbine
 #define CARBINE "gm_mp5a2_blk"
-#define CARBINE_MAG "gm_30Rnd_9x19mm_B_DM51_mp5_blk:5"
+#define CARBINE_MAG "gm_30Rnd_9x19mm_B_DM51_mp5_blk:4"
 // AR
 #define AR "gm_mg3_blk"
 #define AR_MAG "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:3"
@@ -82,7 +88,7 @@
 #define LEADER_TOOLS BASE_LEADER_TOOLS, SIDE_KEY
 #define LINKED BASE_LINKED
 #define LEADER_LINKED BASE_LEADER_LINKED
-#define CARRYALL "gm_dk_army_backpack_73_oli"
+#define CARRYALL "gm_ge_army_backpack_80_oli"
 #define GOG
 
 // Specialized Resupply Vehicle Loadouts
@@ -91,7 +97,7 @@ class gm_ge_army_kat1_451_reammo
 {
   TransportWeapons[] = {AT, AT, AT};
   TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, CARBINE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES, BASE_GRENADES, BASE_GRENADES, BASE_GRENADES};
-  TransportItems[] = {TOOLKIT};
+  TransportItems[] = {"gm_repairkit_01"};
 };
 
 class Car
@@ -147,7 +153,7 @@ class rifleman
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {RIFLE};
   magazines[] = {RIFLE_MAG, BASE_GRENADES};
-  items[] = {TOOLS, RADIO_SR};
+  items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
   opticChoices[] = {ALT_OPTICS};
@@ -163,9 +169,10 @@ class Fic_Soldier_Carbine : rifleman
 // Leadership
 class ftl : rifleman
 { // FTL
+  vest[] = {CAMO_VEST_TL};
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES};
-  items[] += {LEADER_TOOLS, RADIO_MR};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, LEADER_GRENADES};
+  items[] += {LEADER_TOOLS, RADIO_SR};
   linkedItems[] += {LEADER_LINKED, BINOS};
 };
 class sl : ftl
@@ -177,6 +184,7 @@ class sl : ftl
 };
 class plt : sl
 { // Platoon Leader
+  items[]+={RADIO_MR};
 };
 class coy : plt
 { // CO and PL
@@ -201,9 +209,10 @@ class fac : coy
 // Medics
 class sm : Fic_Soldier_Carbine
 { // Medic
+  vest[] = {CAMO_VEST_MEDIC};
   magazines[] = {CARBINE_MAG, MEDIC_GRENADES};
   backpackItems[] = {MEDIC_MEDICAL};
-  items[] += {RADIO_MR, RADIO_LR};
+  items[] += {RADIO_SR, RADIO_LR};
 };
 class plm : sm
 { // Platoon Medic
@@ -215,6 +224,7 @@ class cm : plm
 // Infantry
 class ar : rifleman
 { // AR
+  vest[] = {CAMO_VEST_MG};
   weapons[] = {AR};
   magazines[] = {AR_MAG, PISTOL_MAG, BASE_GRENADES};
   handguns[] = {PISTOL};
@@ -232,7 +242,7 @@ class lat : rifleman
 class rifleman_02 : rifleman
 { // Grenadier
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, BASE_GRENADES};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE,GLRIFLE_MAG_HE, BASE_GRENADES};
 };
 
 // Weapons Teams
@@ -395,7 +405,7 @@ class pilot
 };
 class helicrew : pilot
 { // Aircrew
-  backpackItems[] = {"Toolkit", SIDE_KEY};
+  backpackItems[] = {"gm_repairkit_01", SIDE_KEY};
 };
 class cc : helicrew
 { // Crew Chief
@@ -407,7 +417,7 @@ class vicc : Fic_Soldier_Carbine
 { // Crew
   uniform[] = {CREW_UNIFORM};
   headgear[] = {CREW_HELMET};
-  vest[] = {CREW_VEST};
+  vest[] = {CAMO_VEST_CREW};
   magazines[] = {CARBINE_MAG, CREW_GRENADES};
   backpackItems[] = {SIDE_KEY, RADIO_LR, RADIO_MR};
   linkedItems[] = {LINKED, LEADER_LINKED, BINOS};
@@ -415,7 +425,7 @@ class vicc : Fic_Soldier_Carbine
 };
 class vicd : vicc
 { // Repair Specialist
-  backpackItems[] = {"Toolkit", RADIO_MR, SIDE_KEY};
+  backpackItems[] = {"gm_repairkit_01", RADIO_MR, SIDE_KEY};
   linkedItems[] = {LINKED, LEADER_LINKED};
 };
 class vicl : vicc
@@ -435,7 +445,7 @@ class Fic_eng : Fic_Soldier_Carbine
 class demol : Fic_eng
 { // Demolitions Leader
   magazines[] += {BASE_EXP};
-  backpackItems[] = {RADIO_MR, "Toolkit"};
+  backpackItems[] = {RADIO_MR, "gm_repairkit_01"};
 };
 class demo : Fic_eng
 { // Explosive Specialist
@@ -449,7 +459,7 @@ class mine : Fic_eng
 
 class eng : fic_eng
 { // Logistics Engineer
-  backpackItems[] = {"Toolkit", "ACE_EntrenchingTool", "ACE_Fortify", "ACE_wirecutter"};
+  backpackItems[] = {"gm_repairkit_01", "ACE_EntrenchingTool", "ACE_Fortify", "ACE_wirecutter"};
 };
 class engl : eng
 { // Logistics Leader
