@@ -12,7 +12,8 @@ cmfVers = "CMF2 1.1";
 // Includes for gear
 #include "CfgLoadouts.hpp"
 #include "c\params.hpp"
-
+#include "KPGUI\KPGUI_defines.hpp" 
+#include "KPCF\ui\KPCF_dialog.hpp"
 // Respawn Settings
 respawn = 1;
 respawndelay = 3;
@@ -25,4 +26,9 @@ class CfgDebriefingSections {
 		title = "Acex Killed Events";
 		variable = "acex_killTracker_outputText";
 	};
+};
+
+class CfgFunctions 
+{ 
+	#include "KPCF\KPCF_functions.hpp"
 };

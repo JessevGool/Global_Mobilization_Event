@@ -4,7 +4,8 @@
 
 // ------------------- PASTE BELOW THIS LINE
 // Camo set
-#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_win"
+#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_80_ols","gm_ge_army_uniform_soldier_gloves_80_ols","gm_ge_army_uniform_soldier_80_oli"
+#define SF_CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_win"
 #define CAMO_VEST "gm_ge_army_vest_80_rifleman"
 #define CAMO_BACKPACK "gm_dk_army_backpack_73_oli"
 #define CAMO_HEADGEAR "gm_ge_headgear_m62_cover_win","gm_ge_headgear_m62_win_pap_01"
@@ -458,6 +459,30 @@ class engl : eng
   linkedItems[] += {LEADER_LINKED, BINOS};
   backpackItems[] += {RADIO_MR};
 };
+
+class sf_aar : aar
+{
+  uniform[] = {SF_CAMO_UNIFORM};
+};
+class sf_ftl : ftl
+{
+  uniform[] = {SF_CAMO_UNIFORM};
+};
+class sf_ar : ar
+{
+  uniform[] = {SF_CAMO_UNIFORM};
+};
+class sf_lat : lat
+{
+  uniform[] = {SF_CAMO_UNIFORM};
+};
+
+class sf_sm : sm
+{
+  uniform[] = {SF_CAMO_UNIFORM};
+};
+
 class fallback : rifleman
 {
 }; // This means any faction member who doesn't match something will use this loadout
+
