@@ -20,7 +20,7 @@ KPCF_cratefillerSpawn = "Land_JumpTarget_F";
 KPCF_canSpawnAndDelete = true;
 
 // If set to "true" the item lists will be generated from the config
-KPCF_generateLists = false;
+KPCF_generateLists = true;
 
 // These variable defines the range where inventories can be edited
 // Example: With an setting of 10 all objects in a radius of 10m from the center of the spawn object can be edited
@@ -48,7 +48,8 @@ KPCF_blacklistedItems = [
 // Defines the whitelisted items
 // Whitelisted items will be added after the item detection to ensure the availability
 KPCF_whitelistedItems = [
-    ""
+    "gm_30Rnd_9x19mm_B_DM51_mp5_blk",
+    
 ];
 
 // ----- These Variables will be replaced with activated generatedLists -----

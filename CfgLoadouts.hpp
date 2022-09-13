@@ -41,6 +41,6 @@ class CfgLoadouts {
 	#include "c\loadouts\opf_gear.hpp"
 	class potato_e 
 	{
-		//#include "c\loadouts\csat_sama_hex.hpp"
+		#include "c\loadouts\east_germany.hpp"
 	};
 };

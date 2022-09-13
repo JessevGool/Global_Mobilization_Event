@@ -6,25 +6,31 @@
 #define RADIO_LR "ACRE_PRC117F"
 
 // GEAR
-#define BASE_MEDICAL "ACE_elasticBandage:2","ACE_packingBandage:2","ACE_tourniquet"
-#define MEDIC_MEDICAL "ACE_packingBandage:15","ACE_elasticBandage:15","ACE_epinephrine:12","ACE_salineIV_500:4","ACE_morphine:12","ACE_tourniquet:2","ACE_Splint:10","ACE_bodyBag:5"
+#define BASE_MEDICAL "ACE_elasticBandage:2","ACE_packingBandage:2","ACE_tourniquet:2"
+#define MEDIC_MEDICAL "ACE_packingBandage:20","ACE_elasticBandage:20","ACE_splint:8","ACE_tourniquet:6","ACE_plasmaIV_500:4","kat_Pulseoximeter","kat_larynx","kat_aatKit:6","kat_guedel:5","kat_stethoscope","kat_chestSeal:6","kat_IV_16:6","ACE_morphine:8","ACE_epinephrine:8","ACE_adenosine:8","kat_Carbonate:4","kat_Painkiller:4","kat_nitroglycerin:4","kat_norepinephrine:4","kat_phenylephrine:4","kat_TXA:4","kat_atropine:4","kat_amiodarone:4","kat_naloxone:4","kat_lidocaine:4"
 #define BASE_TOOLS "ACE_MapTools","ACE_Flashlight_KSF1","ACE_SpraypaintRed","ACE_CableTie:2"
-#define BASE_LEADER_TOOLS "ACE_personalAidKit","ACE_Fortify"
+#define BASE_LEADER_TOOLS "ACE_personalAidKit"
 #define BASE_LINKED "ItemMap","gm_gc_compass_f73","gm_watch_kosei_80"
-#define BASE_LEADER_LINKED ""
-#define BASE_FRAG "gm_handgrenade_frag_dm51:2"
-#define BASE_SMOKES "gm_smokeshell_wht_gc:2"
-#define BASE_GRENADES BASE_FRAG,BASE_SMOKES
-#define LEADER_SMOKES BASE_SMOKES,"gm_smokeshell_grn_gc:2","gm_smokeshell_red_gc"
-#define MEDIC_GRENADES BASE_SMOKES,BASE_SMOKES,"gm_smokeshell_red_gc:2"
-#define CREW_GRENADES BASE_SMOKES,"gm_smokeshell_grn_gc:2"
+#define BASE_LEADER_LINKED
+#define BASE_FRAG_BLU "gm_handgrenade_frag_dm51:2"
+#define BASE_FRAG_OPF "gm_handgrenade_frag_rgd5:2"
+#define BASE_SMOKES_BLU "gm_smokeshell_wht_dm25:2"
+#define BASE_SMOKES_OPF "gm_smokeshell_blk_gc:2"
+#define BASE_GRENADES_BLU BASE_FRAG_BLU,BASE_SMOKES_BLU
+#define BASE_GRENADES_OPF BASE_FRAG_OPF,BASE_SMOKES_OPF
+#define LEADER_SMOKES_BLU BASE_SMOKES_BLU,"gm_smokeshell_grn_dm21:2","gm_smokeshell_red_dm23:2"
+#define LEADER_SMOKES_OPF BASE_SMOKES_OPF,"gm_smokeshell_org_gc:2","gm_smokeshell_red_gc:2"
+#define MEDIC_GRENADES BASE_SMOKES_BLU,BASE_SMOKES_BLU,"gm_smokeshell_red_dm23:2"
+#define MEDIC_GRENADES_OPF BASE_SMOKES_OPF,BASE_SMOKES_OPF,"gm_smokeshell_red_gc:2"
+#define CREW_GRENADES_BLU BASE_SMOKES_BLU,"gm_smokeshell_grn_dm21:2"
+#define CREW_GRENADES_OPF BASE_SMOKES_OPF,"gm_smokeshell_org_gc:2"
 #define BASE_ENG "ACE_DefusalKit"
 #define BASE_EXP "gm_explosive_petn_charge:2","gm_explosive_plnp_charge:2","ACE_Clacker"
 #define BASE_MINE "ATMine_Range_Mag:2","APERSBoundingMine_Range_Mag:2","APERSMine_Range_Mag:2"
 #define MINE_DETECTOR "ACE_VMM3"
 #define BINOS "gm_ferod16_win"
-#define RANGE_FINDER ""
-#define BASE_BALLISTICS "ACE_ATragMX","ACE_Kestrel4500"
+#define RANGE_FINDER
+#define BASE_BALLISTICS 
 #define BASE_ARTILLERY "ACE_artilleryTable",BASE_BALLISTICS
 #define VZ99 "potato_vz99_carryWeapon"
 #define VZ99HE "potato_vz99_HE:6"

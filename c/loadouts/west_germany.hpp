@@ -152,7 +152,7 @@ class rifleman
   backpack[] = {CAMO_BACKPACK};
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {RIFLE};
-  magazines[] = {RIFLE_MAG, BASE_GRENADES};
+  magazines[] = {RIFLE_MAG, BASE_GRENADES_BLU};
   items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
@@ -163,7 +163,7 @@ class rifleman
 class Fic_Soldier_Carbine : rifleman
 { // carbine-man
   weapons[] = {CARBINE};
-  magazines[] = {CARBINE_MAG, BASE_GRENADES};
+  magazines[] = {CARBINE_MAG, BASE_GRENADES_BLU};
 };
 
 // Leadership
@@ -171,7 +171,7 @@ class ftl : rifleman
 { // FTL
   vest[] = {CAMO_VEST_TL};
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, LEADER_GRENADES};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, LEADER_GRENADES_BLU};
   items[] += {LEADER_TOOLS, RADIO_SR};
   linkedItems[] += {LEADER_LINKED, BINOS};
 };
@@ -179,7 +179,7 @@ class sl : ftl
 { // SL
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
-  linkedItems[] = {LINKED, LEADER_LINKED, RANGE_FINDER};
+  linkedItems[] = {LINKED, LEADER_LINKED};
   items[] += {RADIO_LR};
 };
 class plt : sl
@@ -202,15 +202,15 @@ class uav : rifleman
 };
 class fac : coy
 { // FAC
-  magazines[] = {GLRIFLE_MAG, SIDE_FAC_GRENADES, "Laserbatteries", PISTOL_MAG};
-  linkedItems[] = {LINKED, LEADER_LINKED, "CUP_LRTV"};
+  magazines[] = {GLRIFLE_MAG, SIDE_FAC_GRENADES, PISTOL_MAG};
+  linkedItems[] = {LINKED, LEADER_LINKED};
 };
 
 // Medics
 class sm : Fic_Soldier_Carbine
 { // Medic
   vest[] = {CAMO_VEST_MEDIC};
-  magazines[] = {CARBINE_MAG, MEDIC_GRENADES};
+  magazines[] = {CARBINE_MAG, MEDIC_GRENADES_BLU};
   backpackItems[] = {MEDIC_MEDICAL};
   items[] += {RADIO_SR, RADIO_LR};
 };
@@ -226,7 +226,7 @@ class ar : rifleman
 { // AR
   vest[] = {CAMO_VEST_MG};
   weapons[] = {AR};
-  magazines[] = {AR_MAG, PISTOL_MAG, BASE_GRENADES};
+  magazines[] = {AR_MAG, PISTOL_MAG, BASE_GRENADES_BLU};
   handguns[] = {PISTOL};
 };
 class aar : rifleman
@@ -242,7 +242,7 @@ class lat : rifleman
 class rifleman_02 : rifleman
 { // Grenadier
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE,GLRIFLE_MAG_HE, BASE_GRENADES};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, BASE_GRENADES_BLU};
 };
 
 // Weapons Teams
@@ -418,7 +418,7 @@ class vicc : Fic_Soldier_Carbine
   uniform[] = {CREW_UNIFORM};
   headgear[] = {CREW_HELMET};
   vest[] = {CAMO_VEST_CREW};
-  magazines[] = {CARBINE_MAG, CREW_GRENADES};
+  magazines[] = {CARBINE_MAG, CREW_GRENADES_BLU};
   backpackItems[] = {SIDE_KEY, RADIO_LR, RADIO_MR};
   linkedItems[] = {LINKED, LEADER_LINKED, BINOS};
   items[] += {BASE_MEDICAL};
@@ -435,7 +435,7 @@ class vicl : vicc
 // Support Teams
 class Fic_eng : Fic_Soldier_Carbine
 { // Base ENG
-  magazines[] = {CARBINE_MAG, CREW_GRENADES};
+  magazines[] = {CARBINE_MAG, CREW_GRENADES_BLU};
   linkedItems[] = {LINKED, LEADER_LINKED};
   items[] += {BASE_ENG, BASE_MEDICAL};
   backpackItems[] = {};
@@ -459,12 +459,12 @@ class mine : Fic_eng
 
 class eng : fic_eng
 { // Logistics Engineer
-  backpackItems[] = {"gm_repairkit_01", "ACE_EntrenchingTool", "ACE_Fortify", "ACE_wirecutter"};
+  backpackItems[] = {"gm_repairkit_01", "ACE_EntrenchingTool", "ACE_wirecutter"};
 };
 class engl : eng
 { // Logistics Leader
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES_BLU};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED, BINOS};
   backpackItems[] += {RADIO_MR};
