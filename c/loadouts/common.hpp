@@ -15,7 +15,7 @@
 #define BASE_FRAG_BLU "gm_handgrenade_frag_dm51:2"
 #define BASE_FRAG_OPF "gm_handgrenade_frag_rgd5:2"
 #define BASE_SMOKES_BLU "SmokeShell:2"
-#define BASE_SMOKES_OPF "SmokeShellBlue:2"
+#define BASE_SMOKES_OPF "SmokeShell:2"
 #define BASE_GRENADES_BLU BASE_FRAG_BLU,BASE_SMOKES_BLU
 #define BASE_GRENADES_OPF BASE_FRAG_OPF,BASE_SMOKES_OPF
 #define LEADER_SMOKES_BLU BASE_SMOKES_BLU,"SmokeShellGreen:2","SmokeShellRed:2"
