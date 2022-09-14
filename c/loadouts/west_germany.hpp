@@ -96,7 +96,7 @@
 class gm_ge_army_kat1_451_reammo
 {
   TransportWeapons[] = {AT, AT, AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, CARBINE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES, BASE_GRENADES, BASE_GRENADES, BASE_GRENADES};
+  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, CARBINE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU};
   TransportItems[] = {"gm_repairkit_01"};
 };
 
@@ -260,7 +260,7 @@ class mmgl : sl
 class mmgg : ar
 { // MMG Gunner
   weapons[] = {MMG};
-  magazines[] = {MMG_MAG, PISTOL_MAG, BASE_GRENADES};
+  magazines[] = {MMG_MAG, PISTOL_MAG, BASE_GRENADES_BLU};
   attachments[] = {};
 };
 class mmgag : Fic_Spotter
@@ -376,7 +376,7 @@ class artg : rifleman
 class spotter : Fic_Spotter
 { // Spotter
   weapons[] = {SPOTTER};
-  magazines[] = {SPOTTER_MAG, BASE_GRENADES};
+  magazines[] = {SPOTTER_MAG, BASE_GRENADES_BLU};
   items[] += {RADIO_MR, "ACE_ATragMX", "ACE_Kestrel4500"};
   linkedItems[] += {LEADER_LINKED};
   attachments[] = {SPOTTER_ATTACHMENTS};
@@ -384,7 +384,7 @@ class spotter : Fic_Spotter
 class sniper : spotter
 { // Sniper
   weapons[] = {SNIPER};
-  magazines[] = {SNIPER_MAG, BASE_GRENADES};
+  magazines[] = {SNIPER_MAG, BASE_GRENADES_BLU};
   items[] = {TOOLS, "ACE_RangeCard"};
   linkedItems[] = {LINKED};
   attachments[] = {SNIPER_ATTACHMENTS};

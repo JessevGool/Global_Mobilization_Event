@@ -79,12 +79,12 @@ KPCF_weapons = [
 // Defines the available grenades
 KPCF_grenades = [
     "gm_handgrenade_frag_dm51",
-    "gm_smokeshell_wht_dm25",
-    "gm_smokeshell_grn_dm21",
-    "gm_smokeshell_red_dm23",
+    "SmokeShell",
+    "SmokeShellGreen",
+    "SmokeShellRed",
     "ACE_HandFlare_White",
     "ACE_HandFlare_Red",
-    "ACE_HandFlare_Green",
+    "ACE_HandFlare_Green"
 ];
 
 // Defines the available explosives
