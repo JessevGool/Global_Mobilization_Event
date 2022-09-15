@@ -243,25 +243,28 @@ class Fic_Spotter: rifleman { //Base Spotter
 
 //MMG
 class mmgl: sl {// MMG Lead
-  backpack[] = {CAMO_BACKPACK_MG};
+  backpack[] = {CAMO_BACKPACK_SL};
   magazines[] += {MMG_MAG};
 };
 class mmgg: ar {// MMG Gunner
+  backpack[] = {CAMO_BACKPACK_MG};
   weapons[] = {MMG};
   magazines[] = {MMG_MAG,PISTOL_MAG,BASE_GRENADES_OPF};
   attachments[] = {};
 };
 class mmgag: Fic_Spotter {// MMG Spotter/Ammo Bearer
+  backpack[] = {CAMO_BACKPACK_MG};
   backpackItems[] += {MMG_MAG};
 };
 
 //MAT
 class matl: sl {// MAT Lead
-  backpack[] = {CAMO_BACKPACK_AT};
+  backpack[] = {CAMO_BACKPACK_SL};
   magazines[] += {MAT_MAG};
 };
 
 class matg: Fic_Soldier_Carbine {// MAT Gunner
+  backpack[] = {CAMO_BACKPACK_AT};
   backpackItems[] = {};
   magazines[] += {MAT_MAG};
   items[] += {BASE_MEDICAL};
@@ -269,6 +272,7 @@ class matg: Fic_Soldier_Carbine {// MAT Gunner
   secondaryAttachments[] = {MAT_OPTIC};
 };
 class matag: Fic_Spotter {// MAT Spotter/Ammo Bearer
+  backpack[] = {CAMO_BACKPACK_AT};
   backpackItems[] = {};
   magazines[] += {MAT_MAG};
   items[] += {BASE_MEDICAL};
@@ -383,6 +387,10 @@ class cc: helicrew {// Crew Chief
 
 //Armor
 class vicc: Fic_Soldier_Carbine {// Crew
+  uniform[] = {CREW_UNIFORM};
+  vest[] = {CREW_VEST};
+  headgear[] = {CREW_HELMET};
+  backpack[] = {CREW_BACKPACK};
   magazines[] = {CARBINE_MAG,CREW_GRENADES_OPF};
   backpackItems[] = {SIDE_KEY,RADIO_LR,RADIO_MR};
   linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
