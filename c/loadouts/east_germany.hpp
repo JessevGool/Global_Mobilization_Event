@@ -67,7 +67,7 @@
 #define MAT_OPTIC "gm_pgo7v_blk"
 
 // Facewear
-#define GOG 
+#define GOG ""
 
 // -------------------- PASTE ABOVE THIS LINE
 //HMG
@@ -90,8 +90,8 @@
 #define SPOTTER_MAG "gm_30Rnd_762x39mm_AP_7N23_ak47_blk:10"
 #define SPOTTER_ATTACHMENTS "gm_zfk4x25_blk"
 // SMG
-#define SMG CARBINE "gm_pm63_blk"
-#define SMG_MAG CARBINE_MAG "gm_25Rnd_9x18mm_B_pst_pm63_blk:10"
+#define SMG  "gm_pm63_blk"
+#define SMG_MAG  "gm_25Rnd_9x18mm_B_pst_pm63_blk:10"
 // Pistol
 #define PISTOL "gm_pm_blk"
 #define PISTOL_MAG "gm_8Rnd_9x18mm_B_pst_pm_blk:3"
@@ -180,7 +180,7 @@ class ftl: rifleman {// FTL
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
 class sl: ftl {// SL
-  backpack[] = {CAMO_BACKPACK_SL}
+  backpack[] = {CAMO_BACKPACK_SL};
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
   linkedItems[] = {LINKED,LEADER_LINKED};
@@ -260,6 +260,7 @@ class matl: sl {// MAT Lead
   backpack[] = {CAMO_BACKPACK_AT};
   magazines[] += {MAT_MAG};
 };
+
 class matg: Fic_Soldier_Carbine {// MAT Gunner
   backpackItems[] = {};
   magazines[] += {MAT_MAG};
