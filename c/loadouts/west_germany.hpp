@@ -430,6 +430,7 @@ class vicd : vicc
 };
 class vicl : vicc
 { // Vehicle Commander
+  headgear[] = {"gm_ge_headgear_beret_crew_blk_armor"};
 };
 
 // Support Teams
@@ -444,6 +445,7 @@ class Fic_eng : Fic_Soldier_Carbine
 // Demo
 class demol : Fic_eng
 { // Demolitions Leader
+  vest[] = {CAMO_VEST_TL};
   magazines[] += {BASE_EXP};
   backpackItems[] = {RADIO_MR, "gm_repairkit_01"};
 };
@@ -463,6 +465,7 @@ class eng : fic_eng
 };
 class engl : eng
 { // Logistics Leader
+  vest[] = {CAMO_VEST_TL};
   weapons[] = {GLRIFLE};
   magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
@@ -478,6 +481,10 @@ class sf_ftl : ftl
 {
   uniform[] = {SF_CAMO_UNIFORM};
 };
+class sf_sl : sl
+{
+  uniform[] = {SF_CAMO_UNIFORM};
+};
 class sf_ar : ar
 {
   uniform[] = {SF_CAMO_UNIFORM};
@@ -486,7 +493,6 @@ class sf_lat : lat
 {
   uniform[] = {SF_CAMO_UNIFORM};
 };
-
 class sf_sm : sm
 {
   uniform[] = {SF_CAMO_UNIFORM};
