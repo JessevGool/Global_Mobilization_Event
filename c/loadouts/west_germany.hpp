@@ -4,7 +4,7 @@
 
 // ------------------- PASTE BELOW THIS LINE
 // Camo set
-#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_80_ols","gm_ge_army_uniform_soldier_gloves_80_ols","gm_ge_army_uniform_soldier_80_oli"
+#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_ols","gm_ge_army_uniform_soldier_parka_80_oli"
 #define SF_CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_win"
 
 #define CAMO_VEST "gm_ge_army_vest_80_rifleman"
@@ -41,8 +41,9 @@
 #define AR "gm_mg3_blk"
 #define AR_MAG "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:3"
 // AT
-#define AT "gm_pzf44_2_oli"
+#define AT "gm_pzf44_2_win"
 #define AT_MAG "gm_1Rnd_44x537mm_heat_dm32_pzf44_2:1"
+#define AT_OPTIC "gm_feroz2x17_pzf44_2_win"
 // MMG
 #define MMG "gm_mg3_blk"
 #define MMG_MAG "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:3"
@@ -238,6 +239,7 @@ class lat : rifleman
 { // RAT
   magazines[] += {AT_MAG};
   launchers[] = {AT};
+  secondaryAttachments[] = {AT_OPTIC};
 };
 class rifleman_02 : rifleman
 { // Grenadier
