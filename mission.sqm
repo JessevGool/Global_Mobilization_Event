@@ -8,7 +8,7 @@ class EditorData
 	toggles=1057;
 	class ItemIDProvider
 	{
-		nextID=7897;
+		nextID=7912;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=115;
+		nextID=124;
 	};
 	class Camera
 	{
-		pos[]={4131.061,115.63276,13390.255};
-		dir[]={-0.51287973,-0.19103761,0.83704031};
-		up[]={-0.099852368,0.98156476,0.16296379};
-		aside[]={0.85275131,-1.181339e-006,0.5225023};
+		pos[]={13012.538,1186.1901,9410.9092};
+		dir[]={0.063144483,-0.73685694,-0.67309332};
+		up[]={0.068824112,0.67604876,-0.73363572};
+		aside[]={-0.99562848,3.7252903e-009,-0.093402274};
 	};
 };
 binarizationWanted=0;
-sourceName="!cmf211";
+sourceName="cmf211";
 addons[]=
 {
 	"A3_Characters_F",
@@ -988,7 +988,7 @@ class CustomAttributes
 		};
 		nAttributes=17;
 	};
-	class Category4
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1017,7 +1017,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category5
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -4995,7 +4995,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=257;
+		items=260;
 		class Item0
 		{
 			dataType="Logic";
@@ -47234,7 +47234,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=1;
+							value=4;
 						};
 					};
 				};
@@ -61770,6 +61770,276 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item257
+		{
+			dataType="Trigger";
+			position[]={13065.132,92.678009,8483.2617};
+			class Attributes
+			{
+				condition="(({alive _x && side _x isEqualTo east} count thisList) < 4) && {({alive _x && side _x isEqualTo west} count thisList) > 0};";
+				sizeA=400;
+				sizeB=400;
+				activationBy="ANY";
+				triggerInterval=5;
+			};
+			id=7897;
+			type="EmptyDetector";
+			atlOffset=-2.0059967;
+		};
+		class Item258
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={13111.033,89.027481,8377.8896};
+			};
+			id=7898;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item259
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=12;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13142.637,88.897751,8431.7354};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+					};
+					id=7900;
+					type="potato_e_ftl";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13147.637,88.625267,8426.7354};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+					};
+					id=7901;
+					type="potato_e_ar";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13137.637,88.577995,8426.7354};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7902;
+					type="potato_e_aar";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13152.637,88.094421,8421.7354};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7903;
+					type="potato_e_lat";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13132.637,88.510559,8421.7354};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7904;
+					type="potato_e_rifleman";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13157.637,87.031174,8416.7354};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=7905;
+					type="potato_e_rifleman_02";
+				};
+				class Item6
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={13177.527,92.274834,8467.457};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7906;
+					type="Move";
+				};
+				class Item7
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={13187.705,94.929741,8546.5605};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7907;
+					type="Move";
+				};
+				class Item8
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={13223.204,96.179283,8694.0332};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7908;
+					type="Move";
+				};
+				class Item9
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={13047.427,99.086349,8686.9834};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7909;
+					type="Move";
+				};
+				class Item10
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={12970.348,97.812302,8574.1846};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7910;
+					type="Move";
+				};
+				class Item11
+				{
+					dataType="Waypoint";
+					loiterAltitude=-3.4028235e+038;
+					position[]={13057.299,96.241554,8525.3047};
+					type="Cycle";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=7911;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=7899;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=2;
+		};
+		class Links
+		{
+			items=2;
+			class Item0
+			{
+				linkID=0;
+				item0=7897;
+				item1=7898;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=7898;
+				item1=4773;
+				class CustomData
+				{
+					type="Sync";
+				};
 			};
 		};
 	};
