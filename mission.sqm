@@ -8,7 +8,7 @@ class EditorData
 	toggles=1057;
 	class ItemIDProvider
 	{
-		nextID=7912;
+		nextID=7914;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=124;
+		nextID=133;
 	};
 	class Camera
 	{
-		pos[]={13012.538,1186.1901,9410.9092};
-		dir[]={0.063144483,-0.73685694,-0.67309332};
-		up[]={0.068824112,0.67604876,-0.73363572};
-		aside[]={-0.99562848,3.7252903e-009,-0.093402274};
+		pos[]={10602.6,324.85434,7501.9883};
+		dir[]={-0.68966573,-0.39896348,0.60431123};
+		up[]={-0.30006662,0.91696614,0.26292941};
+		aside[]={0.65903163,-8.6904038e-008,0.75211543};
 	};
 };
 binarizationWanted=0;
@@ -4995,7 +4995,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=260;
+		items=262;
 		class Item0
 		{
 			dataType="Logic";
@@ -47221,7 +47221,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -47392,7 +47392,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=1;
+							value=4;
 						};
 					};
 				};
@@ -47445,7 +47445,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6746.4819,107.33844,10934.722};
+				position[]={6779.1113,105.93893,10883.771};
+				angles[]={6.2511969,0,0.0019834081};
 			};
 			name="querenhorst";
 			id=4776;
@@ -47487,7 +47488,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -47565,7 +47566,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=1;
+							value=4;
 						};
 					};
 				};
@@ -61502,7 +61503,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=1;
+							value=4;
 						};
 					};
 				};
@@ -61782,6 +61783,7 @@ class Mission
 				sizeA=400;
 				sizeB=400;
 				activationBy="ANY";
+				isServerOnly=1;
 				triggerInterval=5;
 			};
 			id=7897;
@@ -62011,16 +62013,73 @@ class Mission
 			};
 			id=7899;
 		};
+		class Item260
+		{
+			dataType="Trigger";
+			position[]={6803.2026,105.92102,10879.359};
+			class Attributes
+			{
+				condition="(({alive _x && side _x isEqualTo east} count thisList) < 4) && {({alive _x && side _x isEqualTo west} count thisList) > 0};";
+				sizeA=400;
+				sizeB=400;
+				activationBy="ANY";
+				isServerOnly=1;
+				triggerInterval=5;
+			};
+			id=7912;
+			type="EmptyDetector";
+		};
+		class Item261
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6780.4976,101.89859,10680.402};
+				angles[]={6.0552192,0,6.2332273};
+			};
+			id=7913;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=2;
+			nextID=5;
 		};
 		class Links
 		{
-			items=2;
+			items=5;
 			class Item0
 			{
 				linkID=0;
@@ -62035,6 +62094,36 @@ class Mission
 			{
 				linkID=1;
 				item0=7898;
+				item1=4773;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=7912;
+				item1=7913;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=7913;
+				item1=4776;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=7912;
 				item1=4773;
 				class CustomData
 				{
