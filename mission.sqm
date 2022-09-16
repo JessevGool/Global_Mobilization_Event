@@ -8,7 +8,7 @@ class EditorData
 	toggles=1057;
 	class ItemIDProvider
 	{
-		nextID=7914;
+		nextID=7897;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=133;
+		nextID=124;
 	};
 	class Camera
 	{
-		pos[]={10602.6,324.85434,7501.9883};
-		dir[]={-0.68966573,-0.39896348,0.60431123};
-		up[]={-0.30006662,0.91696614,0.26292941};
-		aside[]={0.65903163,-8.6904038e-008,0.75211543};
+		pos[]={4069.3147,147.98172,13236.809};
+		dir[]={0.22292243,-0.54188299,0.81035274};
+		up[]={0.14372921,0.84045261,0.52247465};
+		aside[]={0.96418285,4.4528861e-008,-0.26524049};
 	};
 };
 binarizationWanted=0;
-sourceName="cmf211";
+sourceName="The_Bear_Awakens_V1";
 addons[]=
 {
 	"A3_Characters_F",
@@ -4995,7 +4995,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=262;
+		items=257;
 		class Item0
 		{
 			dataType="Logic";
@@ -47221,7 +47221,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -47234,7 +47234,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=4;
+							value=1;
 						};
 					};
 				};
@@ -47392,7 +47392,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=4;
+							value=1;
 						};
 					};
 				};
@@ -47445,8 +47445,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6779.1113,105.93893,10883.771};
-				angles[]={6.2511969,0,0.0019834081};
+				position[]={6746.4819,107.33844,10934.722};
 			};
 			name="querenhorst";
 			id=4776;
@@ -47488,7 +47487,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -47566,7 +47565,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=4;
+							value=1;
 						};
 					};
 				};
@@ -61503,7 +61502,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=4;
+							value=1;
 						};
 					};
 				};
@@ -61771,364 +61770,6 @@ class Mission
 					};
 				};
 				nAttributes=1;
-			};
-		};
-		class Item257
-		{
-			dataType="Trigger";
-			position[]={13065.132,92.678009,8483.2617};
-			class Attributes
-			{
-				condition="(({alive _x && side _x isEqualTo east} count thisList) < 4) && {({alive _x && side _x isEqualTo west} count thisList) > 0};";
-				sizeA=400;
-				sizeB=400;
-				activationBy="ANY";
-				isServerOnly=1;
-				triggerInterval=5;
-			};
-			id=7897;
-			type="EmptyDetector";
-			atlOffset=-2.0059967;
-		};
-		class Item258
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={13111.033,89.027481,8377.8896};
-			};
-			id=7898;
-			type="ModuleTaskSetState_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleTaskSetState_F_ShowNotification";
-					expression="_this setVariable ['ShowNotification',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleTaskSetState_F_State";
-					expression="_this setVariable ['State',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="SUCCEEDED";
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item259
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=12;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13142.637,88.897751,8431.7354};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=7900;
-					type="potato_e_ftl";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13147.637,88.625267,8426.7354};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=7901;
-					type="potato_e_ar";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13137.637,88.577995,8426.7354};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=7902;
-					type="potato_e_aar";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13152.637,88.094421,8421.7354};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=7903;
-					type="potato_e_lat";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13132.637,88.510559,8421.7354};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=7904;
-					type="potato_e_rifleman";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13157.637,87.031174,8416.7354};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=7905;
-					type="potato_e_rifleman_02";
-				};
-				class Item6
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={13177.527,92.274834,8467.457};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=7906;
-					type="Move";
-				};
-				class Item7
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={13187.705,94.929741,8546.5605};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=7907;
-					type="Move";
-				};
-				class Item8
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={13223.204,96.179283,8694.0332};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=7908;
-					type="Move";
-				};
-				class Item9
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={13047.427,99.086349,8686.9834};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=7909;
-					type="Move";
-				};
-				class Item10
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={12970.348,97.812302,8574.1846};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=7910;
-					type="Move";
-				};
-				class Item11
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={13057.299,96.241554,8525.3047};
-					type="Cycle";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=7911;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=7899;
-		};
-		class Item260
-		{
-			dataType="Trigger";
-			position[]={6803.2026,105.92102,10879.359};
-			class Attributes
-			{
-				condition="(({alive _x && side _x isEqualTo east} count thisList) < 4) && {({alive _x && side _x isEqualTo west} count thisList) > 0};";
-				sizeA=400;
-				sizeB=400;
-				activationBy="ANY";
-				isServerOnly=1;
-				triggerInterval=5;
-			};
-			id=7912;
-			type="EmptyDetector";
-		};
-		class Item261
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={6780.4976,101.89859,10680.402};
-				angles[]={6.0552192,0,6.2332273};
-			};
-			id=7913;
-			type="ModuleTaskSetState_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleTaskSetState_F_ShowNotification";
-					expression="_this setVariable ['ShowNotification',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleTaskSetState_F_State";
-					expression="_this setVariable ['State',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="SUCCEEDED";
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-	};
-	class Connections
-	{
-		class LinkIDProvider
-		{
-			nextID=5;
-		};
-		class Links
-		{
-			items=5;
-			class Item0
-			{
-				linkID=0;
-				item0=7897;
-				item1=7898;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item1
-			{
-				linkID=1;
-				item0=7898;
-				item1=4773;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item2
-			{
-				linkID=2;
-				item0=7912;
-				item1=7913;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item3
-			{
-				linkID=3;
-				item0=7913;
-				item1=4776;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item4
-			{
-				linkID=4;
-				item0=7912;
-				item1=4773;
-				class CustomData
-				{
-					type="Sync";
-				};
 			};
 		};
 	};
