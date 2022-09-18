@@ -14,9 +14,15 @@ cmfVers = "CMF2 1.1";
 #include "c\params.hpp"
 #include "KPGUI\KPGUI_defines.hpp" 
 #include "KPCF\ui\KPCF_dialog.hpp"
+class CfgFunctions 
+{ 
+	#include "KPCF\KPCF_functions.hpp"
+	#include "CfgFunctions.hpp"
+};
 // Respawn Settings
-respawn = 1;
-respawndelay = 3;
+respawn = "Base";
+Respawndelay = 999;
+DisabledAi = 1;
 respawnButton = 1;
 respawnOnStart = -1;
 
@@ -28,7 +34,3 @@ class CfgDebriefingSections {
 	};
 };
 
-class CfgFunctions 
-{ 
-	#include "KPCF\KPCF_functions.hpp"
-};
