@@ -22,7 +22,7 @@ CCO_vehs =
 	[bpz_eng1,	false,	(15*60),	{}],
 	[twot_med1,	false,	(5*60),	{}],
 	[twot_med2,	false,	(5*60),	{}],
-	[tpz_command1,	false,	(10*60),	{}],
+	[tpz_command1,	false,	(60*60),	{}],
 	[halft_car1,	false,	(5*60),	{}],
 	[halft_car2,	false,	(5*60),	{}],
 	[tpz1,	false,	(10*60),	{}],
