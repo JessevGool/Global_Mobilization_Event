@@ -4,7 +4,7 @@
 
 // ------------------- PASTE BELOW THIS LINE
 // Camo set
-#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_ols","gm_ge_army_uniform_soldier_parka_80_oli"
+#define CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_ols", "gm_ge_army_uniform_soldier_parka_80_oli"
 #define SF_CAMO_UNIFORM "gm_ge_army_uniform_soldier_parka_80_win"
 
 #define CAMO_VEST "gm_ge_army_vest_80_rifleman"
@@ -14,7 +14,7 @@
 #define CAMO_VEST_MEDIC "gm_ge_army_vest_80_medic"
 
 #define CAMO_BACKPACK "gm_ge_army_backpack_80_oli"
-#define CAMO_HEADGEAR "gm_ge_headgear_m62_cover_win","gm_ge_headgear_m62_win_pap_01"
+#define CAMO_HEADGEAR "gm_ge_headgear_m62_cover_win", "gm_ge_headgear_m62_win_pap_01"
 
 // Vehicle crew
 #define CREW_UNIFORM "gm_ge_army_uniform_crew_80_oli"
@@ -97,20 +97,20 @@
 class gm_ge_army_kat1_451_reammo
 {
   TransportWeapons[] = {AT, AT, AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, CARBINE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU};
+  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, CARBINE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, AT_MAG, AT_MAG, AT_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU};
   TransportItems[] = {"gm_repairkit_01"};
 };
 
 class Car
 {
   TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE};
+  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, AT_MAG};
   TransportItems[] = {BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL};
 };
 class Tank
 {
   TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE};
+  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE,AT_MAG};
   TransportItems[] = {BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL};
 };
 class Helicopter
@@ -185,7 +185,7 @@ class sl : ftl
 };
 class plt : sl
 { // Platoon Leader
-  items[]+={RADIO_LR};
+  items[] += {RADIO_LR};
 };
 class coy : plt
 { // CO and PL
@@ -212,12 +212,12 @@ class sm : Fic_Soldier_Carbine
 { // Medic
   vest[] = {CAMO_VEST_MEDIC};
   magazines[] = {CARBINE_MAG, MEDIC_GRENADES_BLU};
-  backpackItems[] = {MEDIC_MEDICAL,RADIO_LR};
+  backpackItems[] = {MEDIC_MEDICAL, RADIO_LR};
   items[] += {RADIO_SR};
 };
 class plm : sm
 { // Platoon Medic
-items[] += {RADIO_MR}
+  items[] += {RADIO_MR};
 };
 class cm : plm
 { // Company Medic
@@ -403,7 +403,7 @@ class pilot
   weapons[] = {SMG};
   magazines[] = {SMG_MAG, CREW_GRENADES};
   backpackItems[] = {SIDE_KEY, RADIO_LR};
-  items[] = {BASE_MEDICAL, TOOLS, LEADER_TOOLS, RADIO_MR,SIDE_KEY, RADIO_LR};
+  items[] = {BASE_MEDICAL, TOOLS, LEADER_TOOLS, RADIO_MR, SIDE_KEY, RADIO_LR};
   linkedItems[] = {LINKED, LEADER_LINKED};
 };
 class helicrew : pilot
@@ -504,4 +504,3 @@ class sf_sm : sm
 class fallback : rifleman
 {
 }; // This means any faction member who doesn't match something will use this loadout
-

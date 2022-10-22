@@ -10,7 +10,7 @@
 #define MEDIC_MEDICAL "ACE_packingBandage:20","ACE_elasticBandage:20","ACE_splint:8","ACE_tourniquet:6","ACE_plasmaIV_500:4","kat_Pulseoximeter","kat_larynx","kat_aatKit:6","kat_guedel:5","kat_stethoscope","kat_chestSeal:6","kat_IV_16:6","ACE_morphine:8","ACE_epinephrine:8","ACE_adenosine:8","kat_Carbonate:4","kat_Painkiller:4","kat_nitroglycerin:4","kat_norepinephrine:4","kat_phenylephrine:4","kat_TXA:4","kat_atropine:4","kat_amiodarone:4","kat_naloxone:4","kat_lidocaine:4"
 #define BASE_TOOLS "ACE_MapTools","ACE_Flashlight_KSF1","ACE_SpraypaintRed","ACE_CableTie:2"
 #define BASE_LEADER_TOOLS "ACE_personalAidKit"
-#define BASE_LINKED "ItemMap","gm_gc_compass_f73","gm_watch_kosei_80"
+#define BASE_LINKED "ItemMap","ItemCompass","ItemWatch"
 #define BASE_LEADER_LINKED
 #define BASE_FRAG_BLU "gm_handgrenade_frag_dm51:2"
 #define BASE_FRAG_OPF "gm_handgrenade_frag_rgd5:2"

@@ -8,26 +8,26 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=9704;
+		nextID=9713;
 	};
 	class MarkerIDProvider
 	{
-		nextID=12;
+		nextID=14;
 	};
 	class LayerIndexProvider
 	{
-		nextID=234;
+		nextID=306;
 	};
 	class Camera
 	{
-		pos[]={19209.641,215.45523,12316.665};
-		dir[]={-0.74334341,-0.45697734,0.48847955};
-		up[]={-0.38189924,0.88947833,0.25096068};
-		aside[]={0.54917532,1.4901161e-008,0.83570713};
+		pos[]={4155.3799,154.78447,13262.185};
+		dir[]={-0.62689233,-0.48702824,0.60812473};
+		up[]={-0.34957582,0.87338531,0.33911014};
+		aside[]={0.69628334,1.8533319e-007,0.71777105};
 	};
 };
 binarizationWanted=0;
-sourceName="The_Bear_Awakens_V1";
+sourceName="The_Bear_AwakensV1";
 addons[]=
 {
 	"A3_Characters_F",
@@ -474,9 +474,9 @@ randomSeed=10807839;
 class ScenarioData
 {
 	author="Phoenix & Stalin";
-	overViewPicture="intel\tba_banner.png";
-	loadScreen="intel\tba_banner.png";
-	respawn=1;
+	overViewPicture="intel\tba_banner_low_res.paa";
+	loadScreen="intel\tba_banner_low_res.paa";
+	respawnDialog=0;
 	class Header
 	{
 		gameType="CMFCOOP";
@@ -512,7 +512,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="STRING";
-					value="<font size='18'>SITUATION</font> <br/>24 Hours ago East German Forces mounted a massive attack  on our border. They have successfully pushed into our country and have taken several of our cities. Luckily for us we have been prepared for this day and have quickly gather our forces for a counter attack to drive those commies back home.<br/> <br/><font size='18'>OBJECTIVE</font> <br/>1.  Resecure the towns of Saalsdorf, Mackendorf, Querenhorst, and Grasleben from East German Forces.<br/>2. Blow up the 2 Bridges near Saalsdorf (One in Town, One South of Town) to prevent further East German Aggresion.<br/>3. Push the East Germans out of Weferlingen and secure the HQ there.<br/>4. Attempt to Secure the Bridges in Weferlingen before East German Forces blow the bridges. If Unsucessful use bridge layers to secure ways across the rivers. If Successful use Engineers to defuse Explosives.<br/>5. Continue to push East Germans East and secure the towns past Weferlingen.<br/>6. Destory the Airfield located between Hodingen & Behnsdorf.<br/>7. Destroy the Artillery Base located in the forest north of Belsdorf.<br/><br/><font size='18'>INTENT</font> <br/>Use Recon to scout ahead of your Company. Make use of your platoons Motorized assets to quickly cross large open areas. Use the Engineer's Bridge Laying Capabilities to create new ways to cross the rivers and get behind or flank the enemy. Use your tanks to support the infantry and deal with enemy armor. Use your Gepard to deal with any enemy air. <br/> <br/><font size='18'>ENEMY FORCES</font> <br/>East German Military with Support of Polish Air Forces. <br/><img image='intel\enemy.jpg'/> <br/> <br/><font size='18'>FRIENDLY FORCES</font> <br/>West German Military<br/><img image='intel\friendly.jpg'/> <br/> <br/><font size='18'>VEHICLE/FIRE SUPPORT</font> <br/>4x MG Fuchs, 2x ATGM Fuchs, 6x Leopards 1s, 1x Gepard, 1x Luchs, 1x Engineer Vehicle, 4x Bridge Layers, 1x Command Fuch, 2x Medical Trucks, 2x Platoon Jeeps, 2x Troop Transport Trucks, 1x Fuel Truck, 1x Repair Truck, 1x Ammo Truck<br/> <br/><font size='18'>ROE STATUS</font> <br/>Red - Fire at will";
+					value="<font size='18'>SITUATION</font>   <br/>24 Hours ago East German Forces mounted a massive attack  on our border. They have successfully pushed into our country and have taken several of our cities. Luckily for us we have been prepared for this day and have quickly gather our forces for a counter attack to drive those commies back home.  <br/>   <br/><font size='18'>OBJECTIVE</font>   <br/>1.  Resecure the towns of Saalsdorf, Mackendorf, Querenhorst, and Grasleben from East German Forces.  <br/>2. Blow up the 2 Bridges near Saalsdorf (One in Town, One South of Town) to prevent further East German Aggresion.  <br/>3. Push the East Germans out of Weferlingen and secure the HQ there.  <br/>4. Attempt to Secure the Bridges in Weferlingen before East German Forces blow the bridges. If Unsucessful use bridge layers to secure ways across the rivers. If Successful use Engineers to defuse Explosives.  <br/>5. Continue to push East Germans East and secure the towns past Weferlingen.  <br/>6. Destory the Airfield located between Hodingen & Behnsdorf.  <br/>7. Destroy the Artillery Base located in the forest north of Belsdorf.  <br/>  <br/><font size='18'>INTENT</font>   <br/>Use Recon to scout ahead of your Company. Make use of your platoons Motorized assets to quickly cross large open areas. Use the Engineer's Bridge Laying Capabilities to create new ways to cross the rivers and get behind or flank the enemy. Use your tanks to support the infantry and deal with enemy armor. Use your Gepard to deal with any enemy air.   <br/>   <br/><font size='18'>ENEMY FORCES</font>   <br/>East German Military with Support of Polish Air Forces.   <br/><img image='intel\enemy.jpg'/>   <br/>   <br/><font size='18'>FRIENDLY FORCES</font>   <br/>West German Military  <br/><img image='intel\friendly.jpg'/>   <br/>   <br/><font size='18'>VEHICLE/FIRE SUPPORT</font>   <br/>4x MG Fuchs, 2x ATGM Fuchs, 6x Leopards 1s, 1x Gepard, 1x Luchs, 1x Engineer Vehicle, 4x Bridge Layers, 1x Command Fuch, 2x Medical Trucks, 2x Platoon Jeeps, 2x Troop Transport Trucks, 1x Fuel Truck, 1x Repair Truck, 1x Ammo Truck  <br/>   <br/><font size='18'>ROE STATUS</font>   <br/>Red - Fire at will";
 				};
 			};
 		};
@@ -1004,18 +1004,6 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								singleType="STRING";
-								value="potato_spectate";
-							};
-						};
-					};
 				};
 			};
 		};
@@ -1051,7 +1039,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=129;
+									items=143;
 									class Item0
 									{
 										class data
@@ -2084,6 +2072,118 @@ class CustomAttributes
 											value="tun_msp_reportenemiesnotification";
 										};
 									};
+									class Item129
+									{
+										class data
+										{
+											singleType="STRING";
+											value="potato_markers_groupandunitenabled";
+										};
+									};
+									class Item130
+									{
+										class data
+										{
+											singleType="STRING";
+											value="potato_markers_intrafireteamenabled";
+										};
+									};
+									class Item131
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_time_west";
+										};
+									};
+									class Item132
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_killjip";
+										};
+									};
+									class Item133
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_gearscripttype";
+										};
+									};
+									class Item134
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_spectate_cameramode_free";
+										};
+									};
+									class Item135
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_briefingenableshowtickets";
+										};
+									};
+									class Item136
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_briefingenableshowothersidesdatawest";
+										};
+									};
+									class Item137
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_briefingenableshowothersidesdataeast";
+										};
+									};
+									class Item138
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_briefingenableshowothersidesdataresistance";
+										};
+									};
+									class Item139
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_msp_allowcheckticketsmsp";
+										};
+									};
+									class Item140
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_msp_clasnames_east";
+										};
+									};
+									class Item141
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_msp_clasnames_resistance";
+										};
+									};
+									class Item142
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_msp_clasnames_civilian";
+										};
+									};
 								};
 							};
 						};
@@ -2094,7 +2194,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=129;
+									items=143;
 									class Item0
 									{
 										class data
@@ -5159,7 +5259,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=14.921949;
+														value=0;
 													};
 												};
 												class Item1
@@ -5321,7 +5421,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=200;
+														value=300;
 													};
 												};
 												class Item1
@@ -5348,7 +5448,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=400;
+														value=300;
 													};
 												};
 												class Item1
@@ -5375,7 +5475,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=200;
+														value=150;
 													};
 												};
 												class Item1
@@ -5429,7 +5529,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=14.97932;
+														value=5;
 													};
 												};
 												class Item1
@@ -5456,7 +5556,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=14.548906;
+														value=5;
 													};
 												};
 												class Item1
@@ -5578,6 +5678,384 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item129
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item130
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item131
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=15;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item132
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item133
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Potato Tool";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item134
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item135
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item136
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item137
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item138
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item139
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item140
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item141
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item142
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -5629,7 +6107,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=324;
+		items=328;
 		class Item0
 		{
 			dataType="Logic";
@@ -14000,7 +14478,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4107.9585,111.08134,13355.374};
+				position[]={4110.832,111.08134,13363.166};
 			};
 			id=576;
 			type="Tun_Respawn_Module_Respawn_point";
@@ -17120,7 +17598,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4117.4351,111.23848,13343.488};
+						position[]={4117.4351,111.23878,13343.488};
 						angles[]={0,5.9493389,0};
 					};
 					side="West";
@@ -17129,12 +17607,14 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
+						init="_unit setVariable [""Tun_Respawn_GearPath"",""loadouts\VDVDesert.sqf"", true];";
 						name="BLU_COY";
 						description="Commander@COMPANY COMMAND";
 						isPlayable=1;
 					};
 					id=3847;
 					type="potato_w_coy";
+					atlOffset=0.00029754639;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17235,6 +17715,7 @@ class Mission
 			{
 			};
 			id=3846;
+			atlOffset=0.00029754639;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -67584,176 +68065,6 @@ class Mission
 		};
 		class Item322
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={4111.9829,111.08134,13362.77};
-			};
-			id=9701;
-			type="Tun_Respawn_Module_teleportPoint";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="tun_respawn_teleportMenuOpenConditio";
-					expression="_this setVariable ['tun_respawn_teleportMenuOpenConditio',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="tun_respawn_teleportConditio";
-					expression="_this setVariable ['tun_respawn_teleportConditio',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="true";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="tun_respawn_teleportEnableWest";
-					expression="_this setVariable ['tun_respawn_teleportEnableWest',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="tun_respawn_teleportCheckTickets";
-					expression="_this setVariable ['tun_respawn_teleportCheckTickets',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="tun_respawn_teleportEnableCivilian";
-					expression="_this setVariable ['tun_respawn_teleportEnableCivilian',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="tun_respawn_teleportCreateMarker";
-					expression="_this setVariable ['tun_respawn_teleportCreateMarker',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="tun_respawn_teleportMarkerIcone";
-					expression="_this setVariable ['tun_respawn_teleportMarkerIcon',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="hd_start";
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="tun_respawn_teleportEnableResistance";
-					expression="_this setVariable ['tun_respawn_teleportEnableResistance',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="tun_respawn_teleportPointOBJ";
-					expression="_this setVariable ['tun_respawn_teleportPointOBJ',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="gm_flag_GE";
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="tun_respawn_teleportUseAceAction";
-					expression="_this setVariable ['tun_respawn_teleportUseAceAction',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute10
-				{
-					property="tun_respawn_teleportEnableEast";
-					expression="_this setVariable ['tun_respawn_teleportEnableEast',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute11
-				{
-					property="tun_respawn_teleportName";
-					expression="_this setVariable ['tun_respawn_teleportName',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="Main Base";
-						};
-					};
-				};
-				nAttributes=12;
-			};
-		};
-		class Item323
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -67783,6 +68094,73 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item323
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={20041.877,57.873173,19828.439};
+			};
+			id=9706;
+			type="Tun_Respawn_Module_waitingarea";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Tun_respawn_module_waiting_area_side";
+					expression="_this setVariable ['respawn_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="respawn_west";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item324
+		{
+			dataType="Marker";
+			position[]={4137.3032,110.792,13278.751};
+			name="marker_12";
+			text="LOGI";
+			type="mil_triangle";
+			id=9707;
+			atlOffset=-9.9182129e-005;
+		};
+		class Item325
+		{
+			dataType="Marker";
+			position[]={4080.5801,111.081,13279.126};
+			name="marker_13";
+			text="ARMOR";
+			type="mil_triangle";
+			id=9708;
+			atlOffset=-0.00034332275;
+		};
+		class Item326
+		{
+			dataType="Marker";
+			position[]={4120.166,111.081,13336.497};
+			name="marker_14";
+			text="RECON";
+			type="mil_triangle";
+			id=9709;
+			atlOffset=-0.00034332275;
+		};
+		class Item327
+		{
+			dataType="Marker";
+			position[]={4077.771,111.081,13342.143};
+			name="marker_15";
+			text="SQUAD VICS";
+			type="mil_triangle";
+			id=9710;
+			atlOffset=-0.00034332275;
 		};
 	};
 	class Connections

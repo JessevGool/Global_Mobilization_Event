@@ -39,7 +39,9 @@ AllowedGroundCrew =
 [
 	"potato_w_vicd",
 	"potato_w_vicl",
-	"potato_w_vicc"
+	"potato_w_vicc",
+	"potato_w_demo",
+	"potato_w_demol"
 ];
 // input allowed crew classes for AIR vehicles
 AllowedAirCrew =
