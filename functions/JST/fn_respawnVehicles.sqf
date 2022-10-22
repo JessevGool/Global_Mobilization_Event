@@ -2,7 +2,7 @@ if(!isServer) exitWith {};
 
 CCO_vehs =
 [
-	[luchs1,	true,	(10*60), {}],
+	[luchs1,	false,	(10*60), {}],
 	[leo1,	true,	(15*60), {}],
 	[leo2,	true,	(15*60), {}],
 	[leo3,	true,	(15*60), {}],
@@ -10,10 +10,10 @@ CCO_vehs =
 	[leo5,	true,	(15*60), {}],
 	[leo6,	true,	(15*60), {}],
 	[gepard1,	true,	(15*60), {}],
-	[bridge1,	true,	(15*60), {}],
-	[bridge2,	true,	(15*60), {}],
-	[bridge3,	true,	(15*60), {}],
-	[bridge4,	true,	(15*60), {}],
+	[bridge1,	false,	(15*60), {}],
+	[bridge2,	false,	(15*60), {}],
+	[bridge3,	false,	(15*60), {}],
+	[bridge4,	false,	(15*60), {}],
 	[fivet_transport1,	false, (5*60), {}],
 	[fivet_transport2,	false, (5*60), {}],
 	[fivet_ammo1, 	false, (5*60), {}],
@@ -39,9 +39,8 @@ AllowedGroundCrew =
 [
 	"potato_w_vicd",
 	"potato_w_vicl",
-	"potato_w_vicc",
-	"potato_w_demo",
-	"potato_w_demol"
+	"potato_w_vicc"
+
 ];
 // input allowed crew classes for AIR vehicles
 AllowedAirCrew =
