@@ -181,11 +181,11 @@ class sl : ftl
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
   linkedItems[] = {LINKED, LEADER_LINKED};
-  items[] += {RADIO_LR};
+  items[] += {RADIO_MR};
 };
 class plt : sl
 { // Platoon Leader
-  items[]+={RADIO_MR};
+  items[]+={RADIO_LR};
 };
 class coy : plt
 { // CO and PL
@@ -212,11 +212,12 @@ class sm : Fic_Soldier_Carbine
 { // Medic
   vest[] = {CAMO_VEST_MEDIC};
   magazines[] = {CARBINE_MAG, MEDIC_GRENADES_BLU};
-  backpackItems[] = {MEDIC_MEDICAL};
-  items[] += {RADIO_SR, RADIO_LR};
+  backpackItems[] = {MEDIC_MEDICAL,RADIO_LR};
+  items[] += {RADIO_SR};
 };
 class plm : sm
 { // Platoon Medic
+items[] += {RADIO_MR}
 };
 class cm : plm
 { // Company Medic
@@ -421,13 +422,13 @@ class vicc : Fic_Soldier_Carbine
   headgear[] = {CREW_HELMET};
   vest[] = {CAMO_VEST_CREW};
   magazines[] = {CARBINE_MAG, CREW_GRENADES_BLU};
-  backpackItems[] = {SIDE_KEY, RADIO_LR, RADIO_MR};
+  backpackItems[] = {SIDE_KEY, RADIO_LR, RADIO_SR};
   linkedItems[] = {LINKED, LEADER_LINKED, BINOS};
   items[] += {BASE_MEDICAL};
 };
 class vicd : vicc
 { // Repair Specialist
-  backpackItems[] = {"gm_repairkit_01", RADIO_MR, SIDE_KEY};
+  backpackItems[] = {"gm_repairkit_01", SIDE_KEY};
   linkedItems[] = {LINKED, LEADER_LINKED};
 };
 class vicl : vicc
@@ -449,7 +450,7 @@ class demol : Fic_eng
 { // Demolitions Leader
   vest[] = {CAMO_VEST_TL};
   magazines[] += {BASE_EXP};
-  backpackItems[] = {RADIO_MR, "gm_repairkit_01"};
+  backpackItems[] = {RADIO_LR, "gm_repairkit_01"};
 };
 class demo : Fic_eng
 { // Explosive Specialist
@@ -463,7 +464,7 @@ class mine : Fic_eng
 
 class eng : fic_eng
 { // Logistics Engineer
-  backpackItems[] = {"gm_repairkit_01", "ACE_EntrenchingTool", "ACE_wirecutter"};
+  backpackItems[] = {"gm_repairkit_01", "ACE_EntrenchingTool", "ACE_wirecutter", RADIO_LR};
 };
 class engl : eng
 { // Logistics Leader
@@ -472,7 +473,7 @@ class engl : eng
   magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED, BINOS};
-  backpackItems[] += {RADIO_MR};
+  backpackItems[] += {RADIO_LR};
 };
 
 class sf_aar : aar
