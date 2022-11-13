@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=318;
+		nextID=330;
 	};
 	class Camera
 	{
-		pos[]={4155.3799,154.78447,13262.185};
-		dir[]={-0.61263585,-0.39596462,0.68402433};
-		up[]={-0.26417422,0.91826582,0.29495758};
-		aside[]={0.74490893,1.4901161e-008,0.66716623};
+		pos[]={4259.0757,218.27258,13258.828};
+		dir[]={-0.72891796,-0.43781435,0.52630806};
+		up[]={-0.35495812,0.89906579,0.25629404};
+		aside[]={0.5853945,4.1443855e-008,0.81075072};
 	};
 };
 binarizationWanted=0;
-sourceName="The_Bear_AwakensV1";
+sourceName="TVT_The_Bear_AwakensV2";
 addons[]=
 {
 	"A3_Characters_F",
@@ -65619,7 +65619,7 @@ class Mission
 			};
 			id=8045;
 			type="ModuleTaskSetState_F";
-			atlOffset=-2.2888184e-005;
+			atlOffset=-6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -66273,7 +66273,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13487.86,95.061523,8032.6514};
-				angles[]={-0,0,0.017997233};
+				angles[]={0,0,0.017997233};
 			};
 			id=8068;
 			type="ModuleTaskSetState_F";
