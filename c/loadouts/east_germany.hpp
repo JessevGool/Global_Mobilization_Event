@@ -52,8 +52,8 @@
 #define AR_MAG "gm_45Rnd_545x39mm_B_T_7T3_ak74_org:12"
 
 // AT
-#define AT "gm_rpg7_wud"
-#define AT_MAG "gm_1Rnd_40mm_heat_pg7v_rpg7:2"
+#define AT "cwr3_launch_rpg75"
+#define AT_MAG ""
 
 // MMG
 #define MMG "gm_hmgpkm_prp"
@@ -108,24 +108,24 @@
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
 class RHS_Ural_Flat_MSV_01 {
-	TransportWeapons[] = {AT,AT,AT};
-	TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,CARBINE_MAG,GLRIFLE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,AR_MAG,AR_MAG,MMG_MAG,MMG_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE,MAT_MAG,BASE_GRENADES_OPF,BASE_GRENADES_OPF,BASE_GRENADES_OPF,BASE_GRENADES_OPF};
+	TransportWeapons[] = {};
+	TransportMagazines[] = {};
 	TransportItems[] = {TOOLKIT};
 };
 
 class Car {
-  TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
-  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
+  TransportWeapons[] = {};
+  TransportMagazines[] = {};
+  TransportItems[] = {};
 };
 class Tank {
-  TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
-  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
+  TransportWeapons[] = {};
+  TransportMagazines[] = {};
+  TransportItems[] = {TOOLKIT};
 };
 class Helicopter {
-  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,GLRIFLE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,GLRIFLE_MAG_SMOKE};
-  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
+  TransportMagazines[] = {};
+  TransportItems[] = {TOOLKIT};
 };
 class Plane {};
 class Ship_F {};
@@ -321,11 +321,11 @@ class msaml: sl {// SAM Lead
   magazines[] += {SAM_MAG2};
 };
 class msamg: Fic_Soldier_Carbine {// SAM Gunner
-  SAM_GEAR(CARRYALL, SAM_MAG)
+  SAM_GEAR(CAMO_BACKPACK, SAM_MAG)
   launchers[] = {SAM};
 };
 class msamag: Fic_Spotter {// SAM Spotter/Ammo Bearer
-  SAM_GEAR(CARRYALL, SAM_MAG2)
+  SAM_GEAR(CAMO_BACKPACK, SAM_MAG2)
 };
 
 //Mortar
@@ -341,7 +341,7 @@ class mtrag: Fic_Spotter {// Assistant Mortar
 
 //Artillery
 class artl: sl {// Artillery Leader
-  backpack[] = {CARRYALL};
+  backpack[] = {CAMO_BACKPACK};
   backpackItems[] += {BASE_ARTILLERY};
 };
 class artg: rifleman {// Artillery Gunner
