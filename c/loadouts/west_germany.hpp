@@ -401,7 +401,7 @@ class pilot
   vest[] = {"gm_ge_army_vest_pilot_oli"};
   headgear[] = {"gm_ge_headgear_sph4_oli"};
   weapons[] = {SMG};
-  magazines[] = {SMG_MAG, CREW_GRENADES};
+  magazines[] = {SMG_MAG, CREW_GRENADES_BLU};
   backpackItems[] = {SIDE_KEY, RADIO_LR};
   items[] = {BASE_MEDICAL, TOOLS, LEADER_TOOLS, RADIO_MR, SIDE_KEY, RADIO_LR};
   linkedItems[] = {LINKED, LEADER_LINKED};
