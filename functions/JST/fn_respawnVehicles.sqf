@@ -66,8 +66,36 @@ Mi-8MTV3 (35min)
 
 CCO_vehs =
 [
-	// [luchs1,	false,	(10*60), {}],
-	// [leo1,	true,	(15*60), {}],
+	//WEST
+	[west_leo_1,	true,	(10*60),	{}],
+	[west_Leo_2,	true,	(10*60),	{}],
+	[west_flak_1,	true,	(20*60),	{}],
+	[west_luchs_1,	true,	(15*60),	{}],
+	[west_fuchs_1,	false,	(5*60),		{}],
+	[west_fuchs_2,	false,	(5*60),		{}],
+	[west_atgm_1,	false,	(15*60),	{}],
+	[west_atgm_2,	false,	(15*60),	{}],
+	[west_arty_1,	false,	(30*60),	{}],
+	[west_truck_1,	false,	(5*60),		{}],
+	[west_truck_2,	false,	(5*60),		{}],
+	[west_truck_3,	false,	(5*60),		{}],
+	[west_truck_4,	false,	(5*60),		{}],
+
+	//EAST
+	[east_tank_1,	true,	(15*60),	{}],
+	[east_tank_2,	true,	(15*60),	{}],
+	[east_tank_3,	true,	(15*60),	{}],
+	[east_tank_4,	true,	(5*60),		{}],
+	[east_tank_5,	true,	(5*60),		{}],
+	[east_tank_6,	true,	(5*60),		{}],
+	[east_tank_7,	true,	(5*60),		{}],
+	[east_aa_1,		true,	(20*60),	{}],
+	[east_apc_1,	false,	(10*60),	{}],
+	[east_bike_1,	false,	(5*60),		{}],
+	[east_bike_2,	false,	(5*60),		{}],
+	[east_truck_1,	false,	(5*60),		{}],
+	[east_arty_1,	false,	(30*60),	{}],
+	[east_helo_1,	true,	(15*60),	{}]
 
 ];
 
@@ -76,12 +104,23 @@ AllowedGroundCrew =
 [
 	"potato_w_vicd",
 	"potato_w_vicl",
-	"potato_w_vicc"
+	"potato_w_vicc",
 
+	"potato_e_vicc",
+	"potato_e_vicl",
+	"potato_e_vicd"
 ];
 // input allowed crew classes for AIR vehicles
 AllowedAirCrew =
-[];
+[
+	"potato_w_pilot",
+	"potato_w_cc",
+	"potato_w_helicrew",
+
+	"potato_e_helicrew",
+	"potato_e_pilot",
+	"potato_e_cc"
+];
 
 // banned magazines
 VehBannedMagazines =
