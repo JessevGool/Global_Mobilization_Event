@@ -23,7 +23,11 @@
 params["_bomb","_planter","_actionID"];
 
 // Remove action globally
+<<<<<<< Updated upstream
 [_bomb,_actionID] call BIS_fnc_holdActionRemove;
+=======
+[_bomb,_actionID] remoteExec ["BIS_fnc_holdActionRemove",0];
+>>>>>>> Stashed changes
 
 // Start and notify countdown
 // Switches code block based on what objective got "planted", aka _bomb
@@ -33,7 +37,11 @@ switch (_bomb) do {
 		sector1fuelPlanted = true;
 
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector1fuelPlanted && _countDown >= 0} do {
@@ -61,7 +69,11 @@ switch (_bomb) do {
 		sector1AmmoPlanted = true;
 
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector1AmmoPlanted && _countDown >= 0} do {
@@ -89,7 +101,11 @@ switch (_bomb) do {
 		sector2FuelPlanted = true;
 		
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector2FuelPlanted && _countDown >= 0} do {
@@ -117,7 +133,11 @@ switch (_bomb) do {
 		sector2AmmoPlanted = true;
 
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector2AmmoPlanted && _countDown >= 0} do {
@@ -145,7 +165,11 @@ switch (_bomb) do {
 		sector3FuelPlanted = true;
 				
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector3FuelPlanted && _countDown >= 0} do {
@@ -173,7 +197,11 @@ switch (_bomb) do {
 		sector3AmmoPlanted = true;
 				
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector3AmmoPlanted && _countDown >= 0} do {
@@ -201,7 +229,11 @@ switch (_bomb) do {
 		sector4FuelPlanted = true;
 				
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector4FuelPlanted && _countDown >= 0} do {
@@ -229,7 +261,11 @@ switch (_bomb) do {
 		sector4AmmoPlanted = true;
 				
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector4AmmoPlanted && _countDown >= 0} do {
@@ -257,7 +293,11 @@ switch (_bomb) do {
 		sector5FuelPlanted = true;
 				
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector5FuelPlanted && _countDown >= 0} do {
@@ -285,7 +325,11 @@ switch (_bomb) do {
 		sector5AmmoPlanted = true;
 				
 		// Add defuse holdaction
+<<<<<<< Updated upstream
 		[_bomb] call CCO_fnc_defuseBomb;
+=======
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+>>>>>>> Stashed changes
 
 		// Destruction countdown loop
 		while {sector5AmmoPlanted && _countDown >= 0} do {
