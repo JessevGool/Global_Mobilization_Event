@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=10588;
+		nextID=10590;
 	};
 	class LayerIndexProvider
 	{
-		nextID=212;
+		nextID=237;
 	};
 	class Camera
 	{
-		pos[]={19851.105,155.15353,8382.126};
-		dir[]={-0.060127083,-0.6858151,-0.7254532};
-		up[]={-0.056648847,0.72774684,-0.68349522};
-		aside[]={-0.99669451,-3.081368e-008,0.082606964};
+		pos[]={101.30363,219.16174,8604.1758};
+		dir[]={0.74938065,-0.66124696,-0.034369435};
+		up[]={0.66055262,0.75016826,-0.030295447};
+		aside[]={-0.045815632,0,-0.99895};
 	};
 };
 binarizationWanted=0;
-sourceName="The_Bear_Awakens_TvT_V1";
+sourceName="TVT_The_Bear_AwakensV2";
 addons[]=
 {
 	"A3_Characters_F",
@@ -953,7 +953,7 @@ class CustomAttributes
 		};
 		nAttributes=17;
 	};
-	class Category4
+	class Category3
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -982,7 +982,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category5
+	class Category4
 	{
 		name="Scenario";
 		class Attribute0
@@ -4009,7 +4009,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=202;
+		items=204;
 		class Item0
 		{
 			dataType="Logic";
@@ -9445,7 +9445,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={11429.16,107.04808,6750.665};
+				position[]={11431.271,107.04808,6750.7129};
 			};
 			id=3833;
 			type="ModuleTaskCreate_F";
@@ -9473,7 +9473,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Default";
+							value="attack";
 						};
 					};
 				};
@@ -37994,7 +37994,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={163.651,128.70477,8583.1221};
-						angles[]={-0,1.0461503,-0};
+						angles[]={0,1.0461503,0};
 					};
 					side="West";
 					flags=6;
@@ -38085,7 +38085,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={164.98625,128.7047,8582.3926};
-						angles[]={-0,6.2821379,-0};
+						angles[]={0,6.2821379,0};
 					};
 					side="West";
 					flags=4;
@@ -38228,7 +38228,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={165.26199,128.70512,8586.4053};
-						angles[]={-0,3.1550667,-0};
+						angles[]={0,3.1550667,0};
 					};
 					side="West";
 					flags=6;
@@ -39658,7 +39658,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={171.578,128.70474,8578.873};
-						angles[]={-0,6.0362387,-0};
+						angles[]={0,6.0362387,0};
 					};
 					side="West";
 					flags=6;
@@ -42641,7 +42641,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19860.916,138.76642,8354.0635};
-						angles[]={-0,0.85834348,0};
+						angles[]={0,0.85834348,0};
 					};
 					side="East";
 					flags=6;
@@ -42693,7 +42693,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19864.762,138.76642,8353.2441};
-						angles[]={-0,5.7860408,0};
+						angles[]={0,5.7860408,0};
 					};
 					side="East";
 					flags=4;
@@ -42787,7 +42787,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19861.805,138.76642,8357.4941};
-						angles[]={-0,2.2608802,0};
+						angles[]={0,2.2608802,0};
 					};
 					side="East";
 					flags=6;
@@ -42903,7 +42903,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19951.371,138.06647,8342.3027};
-						angles[]={0,5.8266807,-0};
+						angles[]={0,5.8266807,0};
 					};
 					side="East";
 					flags=5;
@@ -42951,7 +42951,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19857.098,138.30708,8365.9697};
-						angles[]={0,5.9817886,-0};
+						angles[]={0,5.9817886,0};
 					};
 					side="East";
 					flags=5;
@@ -43055,7 +43055,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19868.932,138.76642,8351.8018};
-						angles[]={-0,6.0162807,0};
+						angles[]={0,6.0162807,0};
 					};
 					side="East";
 					flags=6;
@@ -43675,7 +43675,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19866.473,138.76642,8352.4795};
-						angles[]={-0,0.43142152,0};
+						angles[]={0,0.43142152,0};
 					};
 					side="East";
 					flags=6;
@@ -44299,7 +44299,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19869.42,138.76659,8355.624};
-						angles[]={-0,4.3738127,0};
+						angles[]={0,4.3738127,0};
 					};
 					side="East";
 					flags=6;
@@ -44924,7 +44924,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19864.799,138.76642,8361.9229};
-						angles[]={-0,5.6396847,0};
+						angles[]={0,5.6396847,0};
 					};
 					side="East";
 					flags=6;
@@ -45561,7 +45561,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19870.625,138.76642,8362.1504};
-						angles[]={0,4.1711793,-0};
+						angles[]={0,4.1711793,0};
 					};
 					side="East";
 					flags=7;
@@ -46539,16 +46539,215 @@ class Mission
 				nAttributes=1;
 			};
 		};
+		class Item202
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11422.752,107.20608,6748.9922};
+				angles[]={5.8471498,0,6.1337328};
+			};
+			id=10588;
+			type="ModuleTaskCreate_F";
+			atlOffset=0.1544342;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="defend";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Defend the Railyard";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="We have identified this railyard as a major hub for getting supplies to the frontline. Defend it so that we may use it to resupply our troops.";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=4;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="ASSIGNED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item203
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11420.265,107.04808,6754.0859};
+			};
+			id=10589;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=4;
+			nextID=6;
 		};
 		class Links
 		{
-			items=4;
+			items=6;
 			class Item0
 			{
 				linkID=0;
@@ -46584,6 +46783,26 @@ class Mission
 				linkID=3;
 				item0=8331;
 				item1=3833;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=8329;
+				item1=10589;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item5
+			{
+				linkID=5;
+				item0=10589;
+				item1=10588;
 				class CustomData
 				{
 					type="Sync";
