@@ -14,7 +14,18 @@
 		Player only
 */
 if (side player isEqualTo WEST) then {
-	_obj = [sector1ammo,sector1fuel,sector2ammo,sector2fuel,sector3ammo,sector3fuel,sector4ammo,sector4fuel,sector5ammo,sector5fuel];
+	_obj = [
+		sector1ammo,
+		sector1fuel,
+		sector2ammo,
+		sector2fuel,
+		sector3ammo,
+		sector3fuel
+		// sector4ammo,
+		// sector4fuel,
+		// sector5ammo,
+		// sector5fuel
+		];
 	{
 		_objmarker = "marker_" + str(_x);
 		_markerstr = createMarkerLocal [_objmarker, _x];

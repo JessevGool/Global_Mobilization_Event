@@ -16,7 +16,18 @@ sector4ammoPlanted = false;
 sector4fuelPlanted = false;
 // publicVariable "sector4fuelPlanted";
 DEFUSETIME = 180;
-OBJECTIVES = [sector1ammo,sector1fuel,sector2ammo,sector2fuel,sector3ammo,sector3fuel,sector4ammo,sector4fuel,sector5ammo,sector5fuel];
+OBJECTIVES = [
+	sector1ammo,
+	sector1fuel,
+	sector2ammo,
+	sector2fuel,
+	sector3ammo,
+	sector3fuel
+	//sector4ammo,
+	//sector4fuel,
+	//sector5ammo,
+	//sector5fuel
+	];
 
 // Add bomb actions to each objective for East Germans
 call CCO_fnc_clientBombActions;

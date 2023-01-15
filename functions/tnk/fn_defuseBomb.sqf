@@ -66,26 +66,26 @@ params["_objective"];
 				publicVariableServer "sector3ammoPlanted";
 				"Bomb Defused on Sector 3 Ammo" remoteExec ["systemChat",0,false];
 			};
-			case sector4fuel: {
-				sector4fuelPlanted = false;
-				publicVariableServer "sector4fuelPlanted";
-				"Bomb Defused on Sector 4 Fuel" remoteExec ["systemChat",0,false];
-			};
-			case sector4ammo: {
-				sector4ammoPlanted = false;
-				publicVariableServer "sector4ammoPlanted";
-				"Bomb Defused on Sector 4 Ammo" remoteExec ["systemChat",0,false];
-			};
-			case sector5fuel: {
-				sector5fuelPlanted = false;
-				publicVariableServer "sector5fuelPlanted";
-				"Bomb Defused on Sector 5 Fuel" remoteExec ["systemChat",0,false];
-			};
-			case sector5ammo: {
-				sector5ammoPlanted = false;
-				publicVariableServer "sector5ammoPlanted";
-				"Bomb Defused on Sector 5 Ammo" remoteExec ["systemChat",0,false];
-			};
+			// case sector4fuel: {
+			// 	sector4fuelPlanted = false;
+			// 	publicVariableServer "sector4fuelPlanted";
+			// 	"Bomb Defused on Sector 4 Fuel" remoteExec ["systemChat",0,false];
+			// };
+			// case sector4ammo: {
+			// 	sector4ammoPlanted = false;
+			// 	publicVariableServer "sector4ammoPlanted";
+			// 	"Bomb Defused on Sector 4 Ammo" remoteExec ["systemChat",0,false];
+			// };
+			// case sector5fuel: {
+			// 	sector5fuelPlanted = false;
+			// 	publicVariableServer "sector5fuelPlanted";
+			// 	"Bomb Defused on Sector 5 Fuel" remoteExec ["systemChat",0,false];
+			// };
+			// case sector5ammo: {
+			// 	sector5ammoPlanted = false;
+			// 	publicVariableServer "sector5ammoPlanted";
+			// 	"Bomb Defused on Sector 5 Ammo" remoteExec ["systemChat",0,false];
+			// };
 		};
 
 		// Readd the action to the objective
