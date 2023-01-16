@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=388;
+		nextID=426;
 	};
 	class Camera
 	{
 		pos[]={10457.649,155.46869,7256.9248};
-		dir[]={-0.95672745,-0.23929532,-0.16556124};
-		up[]={-0.23579086,0.97094679,-0.0408035};
-		aside[]={-0.17051525,0,0.98535508};
+		dir[]={-0.95672727,-0.23929524,-0.16556181};
+		up[]={-0.23579077,0.97094691,-0.04080363};
+		aside[]={-0.17051585,0,0.98535496};
 	};
 };
 binarizationWanted=0;
@@ -69910,7 +69910,6 @@ class Mission
 			};
 			id=13731;
 			type="EmptyDetector";
-			atlOffset=7.6293945e-006;
 		};
 		class Item1343
 		{
@@ -70080,6 +70079,7 @@ class Mission
 			};
 			id=13733;
 			type="ModuleTaskCreate_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -71221,6 +71221,7 @@ class Mission
 			};
 			id=13748;
 			type="ModuleTaskCreate_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -71856,7 +71857,6 @@ class Mission
 			};
 			id=13752;
 			type="EmptyDetector";
-			atlOffset=7.6293945e-006;
 		};
 		class Item1364
 		{
@@ -71922,6 +71922,7 @@ class Mission
 			};
 			id=13755;
 			type="ModuleTaskSetState_F";
+			atlOffset=-3.8146973e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -72783,6 +72784,7 @@ class Mission
 			};
 			id=13766;
 			type="ModuleTaskSetState_F";
+			atlOffset=-0.00035095215;
 			class CustomAttributes
 			{
 				class Attribute0
