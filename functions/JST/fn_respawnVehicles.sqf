@@ -73,13 +73,11 @@ CCO_vehs =
 	[west_luchs_1,	false,	(15*60),	{}],
 	[west_fuchs_1,	false,	(5*60),		{}],
 	[west_fuchs_2,	false,	(5*60),		{}],
+	[west_fuchs_3,	false,	(5*60),		{}],
+	[west_fuchs_4,	false,	(5*60),		{}],
+	[west_fuchs_5,	false,	(5*60),		{}],
 	[west_atgm_1,	false,	(15*60),	{}],
-	[west_arty_1,	false,	(30*60),	{}],
-	[west_truck_1,	false,	(5*60),		{}],
-	[west_truck_2,	false,	(5*60),		{}],
-	[west_truck_3,	false,	(5*60),		{}],
-	[west_truck_4,	false,	(5*60),		{}],
-	[west_helo_1,	true,	(15*60),	{}],
+	[west_helo_1,	true,	(25*60),	{}],
 
 	//EAST
 	[east_tank_1,	true,	(15*60),	{}],

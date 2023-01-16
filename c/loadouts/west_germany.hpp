@@ -108,26 +108,26 @@
 // Ammo Truck
 class gm_ge_army_kat1_451_reammo
 {
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, AT_MAG, AT_MAG, AT_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU};
+  TransportMagazines[] = {AMMO_RIFLE, AMMO_AR, AMMO_AT, AMMO_GL, AMMO_GRENADE, AMMO_MEDICAL, AMMO_FLARE};
   TransportItems[] = {"gm_repairkit_01"};
 };
 
 class Car
 {
-  TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, AT_MAG};
-  TransportItems[] = {BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL};
+  TransportWeapons[] = {};
+  TransportMagazines[] = {};
+  TransportItems[] = {};
 };
 class Tank
 {
-  TransportWeapons[] = {AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE,AT_MAG};
-  TransportItems[] = {BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL};
+  TransportWeapons[] = {};
+  TransportMagazines[] = {};
+  TransportItems[] = {};
 };
 class Helicopter
 {
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE};
-  TransportItems[] = {BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL, BASE_MEDICAL};
+  TransportMagazines[] = {};
+  TransportItems[] = {};
 };
 class Plane
 {
