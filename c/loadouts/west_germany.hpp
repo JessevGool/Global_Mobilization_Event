@@ -33,7 +33,7 @@
 // Grenadier uses a rifle fired grenade, which means no flares or smokes
 #define GLRIFLE_MAG_FLARE ""
 #define GLRIFLE_MAG_SMOKE ""
-#define GLRIFLE_MAG_HE "gm_1rnd_67mm_heat_dm22a1_g3"
+#define GLRIFLE_MAG_HE "gm_1rnd_67mm_heat_dm22a1_g3:3"
 // Carbine
 #define CARBINE "gm_mp5a2_blk"
 #define CARBINE_MAG "gm_30Rnd_9x19mm_B_DM51_mp5_blk:4"
@@ -49,10 +49,10 @@
 #define MMG_MAG "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:3"
 #define MMG_ATT ""
 // MAT
-#define MAT "gm_pzf84_oli"
-#define MAT_MAG "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:1"
-#define MAT_MAG2 "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:1"
-#define MAT_OPTIC "gm_feroz2x17_pzf84_blk"
+#define MAT "gm_pzf84_win"
+#define MAT_MAG "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:2"
+#define MAT_MAG2 "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:2"
+#define MAT_OPTIC "gm_feroz2x17_pzf84_win"
 // Facewear
 #define GOG ""
 
@@ -82,8 +82,11 @@
 // Pistol
 #define PISTOL "gm_p1_blk"
 #define PISTOL_MAG "gm_8Rnd_9x19mm_B_DM11_p1_blk:3"
+// FLARE PISTOL
+#define FLARE_PISTOL "gm_p2a1_blk"
+#define FLARE_PISTOL_MAG "gm_1Rnd_265mm_flare_single_wht_DM15:4","gm_1Rnd_265mm_flare_multi_yel_DM20:2","gm_1Rnd_265mm_smoke_single_blk_gc:6","gm_1Rnd_265mm_smoke_single_org_DM22:3"
 // Grenades
-#define LEADER_GRENADES BASE_FRAG_BLU, LEADER_SMOKES_BLU, SIDE_CHEM_LIGHT
+#define LEADER_GRENADES BASE_FRAG_BLU, LEADER_SMOKES_BLU
 // Gear
 #define TOOLS BASE_TOOLS
 #define LEADER_TOOLS BASE_LEADER_TOOLS, SIDE_KEY
@@ -92,12 +95,20 @@
 #define CARRYALL "gm_ge_army_backpack_80_oli"
 #define GOG
 
+// Ammo
+#define AMMO_RIFLE "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:200"
+#define AMMO_AR "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:75"
+#define AMMO_AT "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:30"
+#define AMMO_GL "gm_1rnd_67mm_heat_dm22a1_g3:50"
+#define AMMO_GRENADE "gm_handgrenade_frag_dm51:30" , "SmokeShell:50"
+#define AMMO_MEDICAL "ACE_packingBandage:200","ACE_elasticBandage:200","ACE_splint:20"
+#define AMMO_FLARE "gm_1Rnd_265mm_flare_single_wht_DM15:50","gm_1Rnd_265mm_flare_multi_yel_DM20:25","gm_1Rnd_265mm_smoke_single_blk_gc:50","gm_1Rnd_265mm_smoke_single_org_DM22:25"
+
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
 class gm_ge_army_kat1_451_reammo
 {
-  TransportWeapons[] = {AT, AT, AT};
-  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, CARBINE_MAG, CARBINE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, AT_MAG, AT_MAG, AT_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU};
+  TransportMagazines[] = {RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, RIFLE_MAG, GLRIFLE_MAG, GLRIFLE_MAG, AR_MAG, AR_MAG, AR_MAG, AR_MAG, MMG_MAG, MMG_MAG, AT_MAG, AT_MAG, AT_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_SMOKE, MAT_MAG, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU, BASE_GRENADES_BLU};
   TransportItems[] = {"gm_repairkit_01"};
 };
 
@@ -172,14 +183,13 @@ class ftl : rifleman
 { // FTL
   vest[] = {CAMO_VEST_TL};
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, LEADER_GRENADES};
+  handguns[] = {FLARE_PISTOL};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, FLARE_PISTOL_MAG, LEADER_GRENADES};
   items[] += {LEADER_TOOLS, RADIO_SR};
   linkedItems[] += {LEADER_LINKED, BINOS};
 };
 class sl : ftl
 { // SL
-  handguns[] = {PISTOL};
-  magazines[] += {PISTOL_MAG};
   linkedItems[] = {LINKED, LEADER_LINKED};
   items[] += {RADIO_MR};
 };
@@ -238,14 +248,15 @@ class aar : rifleman
 };
 class lat : rifleman
 { // RAT
-  magazines[] += {AT_MAG};
-  launchers[] = {AT};
-  secondaryAttachments[] = {AT_OPTIC};
+  magazines[] += {MAT_MAG};
+  launchers[] = {MAT};
+  secondaryAttachments[] = {MAT_OPTIC};
 };
 class rifleman_02 : rifleman
 { // Grenadier
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, GLRIFLE_MAG_HE, BASE_GRENADES_BLU};
+  handguns[] = {FLARE_PISTOL};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, FLARE_PISTOL_MAG, BASE_GRENADES_BLU};
 };
 
 // Weapons Teams
@@ -380,7 +391,7 @@ class spotter : Fic_Spotter
 { // Spotter
   weapons[] = {SPOTTER};
   magazines[] = {SPOTTER_MAG, BASE_GRENADES_BLU};
-  items[] += {RADIO_MR, "ACE_ATragMX", "ACE_Kestrel4500"};
+  items[] += {RADIO_MR, "ACE_RangeCard"};
   linkedItems[] += {LEADER_LINKED};
   attachments[] = {SPOTTER_ATTACHMENTS};
 };
