@@ -4,7 +4,7 @@ if (bluWaves isEqualTo bluMaxWaves) then {
 	// Increment wave count
 	bluWaves = bluWaves + 1;
 	publicVariable "bluWaves";
-	systemChat format ["[CCE Respawn] You have used %1/8 waves", bluWaves];
+	systemChat format ["[CCE Respawn] You have used %1/%2 waves", bluWaves,bluMaxWaves];
 	// Spawn wave
 	[west, false] remoteExec ["Tun_Respawn_fnc_force_Respawn", 2];
 };

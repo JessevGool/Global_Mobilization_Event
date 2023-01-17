@@ -4,7 +4,7 @@ if (opfWaves isEqualTo opfMaxWaves) then {
 	// Increment wave count
 	opfWaves = opfWaves + 1;
 	publicVariable "opfWaves";
-	systemChat format ["[WW Respawn] You have used %1/8 waves",opfWaves];
+	systemChat format ["[CCE Respawn] You have used %1/%2 waves",opfWaves,opfMaxWaves];
 	// Spawn wave
 	[east, false] remoteExec ["Tun_Respawn_fnc_force_Respawn", 2];
 };
