@@ -12,18 +12,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=426;
+		nextID=464;
 	};
 	class Camera
 	{
 		pos[]={10457.649,155.46869,7256.9248};
-		dir[]={-0.95672727,-0.23929524,-0.16556181};
-		up[]={-0.23579077,0.97094691,-0.04080363};
-		aside[]={-0.17051585,0,0.98535496};
+		dir[]={-0.95672739,-0.23929524,-0.16556183};
+		up[]={-0.2357908,0.97094691,-0.040803634};
+		aside[]={-0.17051587,0,0.98535508};
 	};
 };
 binarizationWanted=0;
-sourceName="TVT_The_Bear_AwakensV1_bomb_v2";
+sourceName="TVT_The_Bear_AwakensV1";
 addons[]=
 {
 	"A3_Characters_F",
