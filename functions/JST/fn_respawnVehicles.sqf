@@ -1,36 +1,100 @@
 if(!isServer) exitWith {};
 
+/**
+West: 
+
+Tanks
+Leopard 1A1 (10min)
+Leopard 1A1A4 (15min)
+Leopard 1A5 (20min)
+M60A3 (20min)
+
+Combat Vehicles
+SpPz 2A1 Luchs (15min)
+SPz 1A1+ Marder (20min)
+Transport/Support (5min)
+Truck 0.5t MG3 (5min)
+Truck 0.5t LATGM (15min)
+TPz 1 Engineer Fuchs (5min)
+TPz 1 Recon Fuchs (15min)
+
+Optional Vehicle Support
+BrPz 1 (15min)
+FlakPz 1A1 (20min)
+M109G (Howitzer) (30min)
+
+Artillery
+M252 82 Mortar (15min)
+M119 155m Howitzer (30min)
+
+Helicopters
+CH-53G (15min)
+VBH 1A1 Swooper (15min)
+UH-1D (Armed) (25min)
+UH-1D (Gunship) (30min)
+
+East:
+
+Tanks
+PT-76B (5min)
+T-55 (15min)
+T-55AM2B (20min)
+
+Combat Vehicles
+BMP-1 SP-2 (15min)
+SPW-40P2 “BRDM” (10min)
+SPW-60PB “BTR-60” (10min)
+BMP-2 (20min)
+Transport/Support (5min)
+Pkw gel. 469 DShKM (5min)
+Pkw gel. 469 SPG-9 (10min)
+
+Optional Vehicle Support
+Fla-SFL 23-4V1 (20min)
+SFL 2S1 (Howitzer) (30min)
+
+Artillery
+2B14 82mm Mortar (15min)
+D-30 122mm Howitzer (30min)
+
+Helicopters
+Mi-2T (15min)
+Mi-2US (20min)
+Mi-2URN (25min)
+Mi-8MTV3 (35min)
+ */
+
 CCO_vehs =
 [
-	[luchs1,	true,	(10*60), {}],
-	[leo1,	true,	(15*60), {}],
-	[leo2,	true,	(15*60), {}],
-	[leo3,	true,	(15*60), {}],
-	[leo4,	true,	(15*60), {}],
-	[leo5,	true,	(15*60), {}],
-	[leo6,	true,	(15*60), {}],
-	[gepard1,	true,	(15*60), {}],
-	[bridge1,	true,	(15*60), {}],
-	[bridge2,	true,	(15*60), {}],
-	[bridge3,	true,	(15*60), {}],
-	[bridge4,	true,	(15*60), {}],
-	[fivet_transport1,	false, (5*60), {}],
-	[fivet_transport2,	false, (5*60), {}],
-	[fivet_ammo1, 	false, (5*60), {}],
-	[fivet_fuel1, 	false, (5*60), {}],
-	[twot_repair1,	false, (5*60), {}],
-	[bpz_eng1,	false,	(15*60),	{}],
-	[twot_med1,	false,	(5*60),	{}],
-	[twot_med2,	false,	(5*60),	{}],
-	[tpz_command1,	false,	(60*60),	{}],
-	[halft_car1,	false,	(5*60),	{}],
-	[halft_car2,	false,	(5*60),	{}],
-	[tpz1,	false,	(10*60),	{}],
-	[tpz2,	false,	(10*60),	{}],
-	[tpz3,	false,	(10*60),	{}],
-	[tpz4,	false,	(10*60),	{}],
-	[tpz5,	false,	(10*60),	{}],
-	[tpz6,	false,	(10*60),	{}]
+	//WEST
+	[west_leo_1,	true,	(10*60),	{}],
+	[west_Leo_2,	true,	(10*60),	{}],
+	[west_Leo_3,	true,	(10*60),	{}],
+	[west_Leo_4,	true,	(10*60),	{}],
+	[west_flak_1,	true,	(20*60),	{}],
+	[west_luchs_1,	false,	(15*60),	{}],
+	[west_luchs_2,	false,	(15*60),	{}],
+	[west_truck_1,	false,	(5*60),		{}],
+	[west_truck_2,	false,	(5*60),		{}],
+	[west_truck_3,	false,	(5*60),		{}],
+	[west_truck_4,	false,	(5*60),		{}],
+	[west_helo_1,	true,	(25*60),	{}],
+
+	//EAST
+	[east_tank_1,	true,	(15*60),	{}],
+	[east_tank_2,	true,	(15*60),	{}],
+	[east_tank_3,	true,	(15*60),	{}],
+	[east_tank_4,	true,	(5*60),		{}],
+	[east_tank_5,	true,	(5*60),		{}],
+	[east_tank_6,	true,	(5*60),		{}],
+	[east_tank_7,	true,	(5*60),		{}],
+	[east_aa_1,		true,	(20*60),	{}],
+	[east_apc_1,	false,	(10*60),	{}],
+	[east_bike_1,	false,	(5*60),		{}],
+	[east_bike_2,	false,	(5*60),		{}],
+	[east_truck_1,	false,	(5*60),		{}],
+	[east_arty_1,	false,	(30*60),	{}],
+	[east_helo_1,	true,	(15*60),	{}]
 
 ];
 
@@ -39,11 +103,23 @@ AllowedGroundCrew =
 [
 	"potato_w_vicd",
 	"potato_w_vicl",
-	"potato_w_vicc"
+	"potato_w_vicc",
+
+	"potato_e_vicc",
+	"potato_e_vicl",
+	"potato_e_vicd"
 ];
 // input allowed crew classes for AIR vehicles
 AllowedAirCrew =
-[];
+[
+	"potato_w_pilot",
+	"potato_w_cc",
+	"potato_w_helicrew",
+
+	"potato_e_helicrew",
+	"potato_e_pilot",
+	"potato_e_cc"
+];
 
 // banned magazines
 VehBannedMagazines =

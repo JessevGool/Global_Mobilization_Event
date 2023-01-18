@@ -10,7 +10,7 @@
 
 // The Base object is for the player interaction, so at these object you can open the dialog
 KPCF_cratefillerBase = [
-    "gm_ge_army_ammobox_everything_80"
+    "gm_ammobox_pile_large_02_empty"
 ];
 
 // The Spawn object is the point where crates will spawn and acts the center for the KPCF_spawnRadius
@@ -31,8 +31,9 @@ KPCF_interactRadius = 5;
 
 // Defines the available crates
 KPCF_crates = [
-    "gm_ge_army_ammobox_cache_80",
-    "gm_ge_army_ammobox_smallarms_80"
+    "gm_gc_army_ammobox_cache_80",
+    "gm_gc_army_ammobox_smallarms_80",
+    "Land_PaperBox_01_small_closed_brown_F"
 ];
 
 
@@ -48,19 +49,20 @@ KPCF_blacklistedItems = [
 // Defines the whitelisted items
 // Whitelisted items will be added after the item detection to ensure the availability
 KPCF_whitelistedItems = [
-    "gm_20Rnd_762x51mm_B_T_DM21_g3_blk",
-    "gm_1rnd_67mm_heat_dm22a1_g3",
-    "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn",
-    "gm_30Rnd_9x19mm_B_DM51_mp5_blk",
-    "gm_1Rnd_44x537mm_heat_dm32_pzf44_2",
-    "gm_8Rnd_9x19mm_B_DM11_p1_blk",
-    "gm_1Rnd_265mm_flare_single_wht_DM15",
-    "gm_1Rnd_265mm_flare_multi_wht_DM25",
-    "gm_1Rnd_265mm_flare_single_red_DM13",
-    "gm_1Rnd_265mm_flare_multi_red_DM23",
-    "gm_1Rnd_265mm_flare_single_grn_DM11",
-    "gm_1Rnd_265mm_flare_multi_grn_DM21",
-    "gm_ferod16_win"
+    "gm_30Rnd_762x39mm_B_T_57N231P_ak47_blk",
+    "1Rnd_HE_Grenade_shell",
+    "1Rnd_Smoke_Grenade_shell",
+    "1Rnd_SmokeRed_Grenade_shell",
+    "UGL_FlareYellow_F",
+    "gm_30Rnd_545x39mm_B_T_7T3_ak74_org",
+    "gm_100Rnd_762x54mmR_B_T_7t2_pk_grn",
+    "gm_1Rnd_40mm_heat_pg7vl_rpg7",
+    "gm_75Rnd_762x39mm_B_57N231_ak47_blk",
+    "CUP_launch_RPG18",
+    "gm_10Rnd_762x54mmR_AP_7N1_svd_blk",
+    "gm_1Rnd_265mm_flare_single_wht_gc",
+    "gm_1Rnd_265mm_flare_single_red_gc",
+    "gm_8Rnd_9x18mm_B_pst_pm_blk"
     
 ];
 
@@ -68,17 +70,22 @@ KPCF_whitelistedItems = [
 
 // Defines the available weapons
 KPCF_weapons = [
-    "gm_g3a4_grn",
-    "gm_mg3_blk",
-    "gm_mp5a2_blk",
-    "gm_pzf44_2_oli",
-    "gm_p1_blk",
-    "gm_p2a1_blk"
+    "gm_akm_wud",
+    "gm_akm_pallad_wud",
+    "gm_mpiak74n_brn",
+    "gm_hmgpkm_prp",
+    "gm_rpg7_wud",
+    "gm_mpikms72_brn",
+    "gm_lmgrpk_brn",
+    "CUP_launch_RPG18",
+    "gm_svd_wud",
+    "gm_lp1_blk",
+    "gm_pm_blk"
 ];
 
 // Defines the available grenades
 KPCF_grenades = [
-    "gm_handgrenade_frag_dm51",
+    "gm_handgrenade_frag_rgd5",
     "SmokeShell",
     "SmokeShellGreen",
     "SmokeShellRed",
@@ -89,8 +96,7 @@ KPCF_grenades = [
 
 // Defines the available explosives
 KPCF_explosives = [
-    "gm_explosive_plnp_charge",
-    "gm_explosive_petn_charge"
+    
 ];
 
 // Defines the available items
@@ -105,35 +111,13 @@ KPCF_items = [
     "ACE_salineIV_250",
     "ACE_salineIV_500",
     "ACE_salineIV_1000",
-    "kat_Pulseoximeter",
-    "kat_larynx",
-    "kat_aatKit",
-    "kat_guedel",
-    "kat_stethoscope",
-    "kat_chestSeal",
-    "kat_IV_16",
     "ACE_morphine",
     "ACE_epinephrine",
     "ACE_adenosine",
-    "kat_Carbonate",
-    "kat_Painkiller",
-    "kat_nitroglycerin",
-    "kat_norepinephrine",
-    "kat_phenylephrine",
-    "kat_TXA",
-    "kat_atropine",
-    "kat_amiodarone",
-    "kat_naloxone",
-    "kat_lidocaine",
-    "ACRE_PRC343",
-    "ACRE_PRC148",
-    "ACRE_PRC117F",
-    "ACE_Clacker",
-    "ACE_SpareBarrel_Item",
     "gm_repairkit_01"
 ];
 
 // Defines the available backpacks
 KPCF_backpacks = [
-    "gm_ge_army_backpack_80_oli"
+    "gm_gc_army_backpack_80_assaultpack_empty_str"
 ];
