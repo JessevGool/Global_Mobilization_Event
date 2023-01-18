@@ -18,7 +18,7 @@ if (isServer) then
 		while {JST_do_snow} do
 		{
 			private _rate = (random [60, 90, 120]);
-			private _maxDensity = 1000;
+			private _maxDensity = 500;
 			JST_snow_density = random _maxDensity;
 			publicVariable "JST_snow_density";
 			setWind [(random [-5, 0, 5]), (random [-5, 0, 5]), true];
