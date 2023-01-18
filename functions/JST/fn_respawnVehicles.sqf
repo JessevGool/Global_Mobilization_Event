@@ -67,10 +67,10 @@ Mi-8MTV3 (35min)
 CCO_vehs =
 [
 	//WEST
-	[west_leo_1,	true,	(10*60),	{}],
-	[west_Leo_2,	true,	(10*60),	{}],
-	[west_Leo_3,	true,	(10*60),	{}],
-	[west_Leo_4,	true,	(10*60),	{}],
+	[west_leo_1,	true,	(15*60),	{}],
+	[west_Leo_2,	true,	(15*60),	{}],
+	[west_Leo_3,	true,	(15*60),	{}],
+	[west_Leo_4,	true,	(15*60),	{}],
 	[west_flak_1,	true,	(20*60),	{}],
 	[west_luchs_1,	false,	(15*60),	{}],
 	[west_luchs_2,	false,	(15*60),	{}],
