@@ -96,20 +96,20 @@
 #define GOG
 
 // Ammo
-#define AMMO_RIFLE "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:200"
-#define AMMO_AR "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:75"
-#define AMMO_AT "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:30"
-#define AMMO_GL "gm_1rnd_67mm_heat_dm22a1_g3:50"
-#define AMMO_GRENADE "gm_handgrenade_frag_dm51:30" , "SmokeShell:50"
-#define AMMO_MEDICAL "ACE_packingBandage:200","ACE_elasticBandage:200","ACE_splint:20"
-#define AMMO_FLARE "gm_1Rnd_265mm_flare_single_wht_DM15:50","gm_1Rnd_265mm_flare_multi_yel_DM20:25","gm_1Rnd_265mm_smoke_single_blk_gc:50","gm_1Rnd_265mm_smoke_single_org_DM22:25"
+#define AMMO_RIFLE "gm_20Rnd_762x51mm_B_T_DM21_g3_blk:500"
+#define AMMO_AR "gm_120Rnd_762x51mm_B_T_DM21_mg3_grn:200"
+#define AMMO_AT "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:60"
+#define AMMO_GL "gm_1rnd_67mm_heat_dm22a1_g3:100"
+#define AMMO_GRENADE "gm_handgrenade_frag_dm51:60" , "SmokeShell:100"
+#define AMMO_MEDICAL "ACE_packingBandage:250","ACE_elasticBandage:250","ACE_splint:25"
+#define AMMO_FLARE "gm_1Rnd_265mm_flare_single_wht_DM15:50","gm_1Rnd_265mm_flare_multi_yel_DM20:30","gm_1Rnd_265mm_smoke_single_blk_gc:50","gm_1Rnd_265mm_smoke_single_org_DM22:30"
 
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
 class gm_ge_army_kat1_451_reammo
 {
-  TransportMagazines[] = {AMMO_RIFLE, AMMO_AR, AMMO_AT, AMMO_GL, AMMO_GRENADE, AMMO_MEDICAL, AMMO_FLARE};
-  TransportItems[] = {"gm_repairkit_01"};
+  TransportMagazines[] = {AMMO_RIFLE, AMMO_AR, AMMO_AT, AMMO_GL, AMMO_GRENADE, AMMO_FLARE};
+  TransportItems[] = {AMMO_MEDICAL};
 };
 
 class Car
