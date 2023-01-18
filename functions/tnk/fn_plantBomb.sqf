@@ -47,6 +47,7 @@ switch (_bomb) do {
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
+				removeAllActions sector1fuel;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
 				_bombText = "A Sector 1 Objective has been destroyed by East Germany!";
@@ -76,6 +77,7 @@ switch (_bomb) do {
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
+				removeAllActions sector1ammo;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
 				_bombText = "A Sector 1 Objective has been destroyed by East Germany!";
@@ -105,6 +107,7 @@ switch (_bomb) do {
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
+				removeAllActions sector2fuel;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
 				_bombText = "A Sector 2 Objective has been destroyed by East Germany!";
@@ -134,6 +137,7 @@ switch (_bomb) do {
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
+				removeAllActions sector2ammo;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
 				_bombText = "A Sector 2 Objective has been destroyed by East Germany!";
@@ -163,6 +167,7 @@ switch (_bomb) do {
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
+				removeAllActions sector3fuel;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
 				_bombText = "A Sector 3 Objective has been destroyed by East Germany!";
@@ -192,6 +197,7 @@ switch (_bomb) do {
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
+				removeAllActions sector3ammo;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
 				_bombText = "A Sector 3 Objective has been destroyed by East Germany!";
