@@ -114,7 +114,10 @@ KPCF_items = [
     "ACE_morphine",
     "ACE_epinephrine",
     "ACE_adenosine",
-    "gm_repairkit_01"
+    "gm_repairkit_01",
+    "CUP_compats_122mm_he",
+    "CUP_compats_122mm_illum",
+    "CUP_compats_122mm_smoke"
 ];
 
 // Defines the available backpacks
