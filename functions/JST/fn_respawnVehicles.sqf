@@ -366,10 +366,20 @@ waitUntil {time > 3};
 	// store data on vehicle
 	private _vehArray = [_unitVar, _restricted, _time, _pos, [_vDir, _vUp], _class, _config, _name, _attObjs, _fnc, _sideLocInfo];
 	_unitVar setVariable ["CCO_vehArray", _vehArray, true];
-	// CCO16 add psyops actions if loudspeaker attached
-	if ((_attObjs findIf {(_x select 0) isEqualTo "Land_Loudspeakers_F"}) > -1) then
-	{
-		[_unitVar, EAST] remoteExec ["JST_fnc_psy_addMenuAction", 0, true];
+	// TBA CCE Tank HE catch
+	if (_class isEqualTo "gm_gc_army_t55") then {
+		_unitVar removeMagazinesTurret ["gm_21Rnd_100x695mm_he_of412",[0]];
+		for [{ _i = 0 }, { _i < 4 }, { _i = _i + 1 }] do
+		{
+			_unitVar addMagazineTurret ["gm_1Rnd_100x695mm_he_of412", [0]];
+		};
+	};
+	if (_class isEqualTo "gm_gc_army_pt76b") then {
+		_unitVar removeMagazinesTurret ["gm_24Rnd_76x385mm_he_of350",[0]];
+		for [{ _i = 0 }, { _i < 3 }, { _i = _i + 1 }] do
+		{
+			_unitVar addMagazineTurret ["gm_1Rnd_76x385mm_he_of350", [0]];
+		};
 	};
 	// Remove banned magazines
 	{
