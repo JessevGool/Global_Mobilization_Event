@@ -50,8 +50,8 @@
 #define MMG_ATT ""
 // MAT
 #define MAT "gm_pzf84_win"
-#define MAT_MAG "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:2"
-#define MAT_MAG2 "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:2"
+#define MAT_MAG "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:1"
+#define MAT_MAG2 "gm_1Rnd_84x245mm_heat_t_DM12_carlgustaf:1"
 #define MAT_OPTIC "gm_feroz2x17_pzf84_win"
 // Facewear
 #define GOG ""
