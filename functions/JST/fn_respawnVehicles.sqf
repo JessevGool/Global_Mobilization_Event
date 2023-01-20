@@ -79,6 +79,7 @@ CCO_vehs =
 	[west_truck_3,	false,	(5*60),		{}],
 	[west_truck_4,	false,	(5*60),		{}],
 	[west_helo_1,	true,	(25*60),	{}],
+	[west_repair_1,	true,	(5*60),		{}],
 
 	//EAST
 	[east_tank_1,	true,	(15*60),	{}],
@@ -93,6 +94,9 @@ CCO_vehs =
 	[east_bike_1,	false,	(5*60),		{}],
 	[east_bike_2,	false,	(5*60),		{}],
 	[east_truck_1,	false,	(5*60),		{}],
+	[east_truck_2,	false,	(5*60),		{}],
+	[east_truck_3,	false,	(5*60),		{}],
+	[east_truck_4,	false,	(5*60),		{}],
 	[east_arty_1,	false,	(30*60),	{}],
 	[east_helo_1,	true,	(15*60),	{}]
 
