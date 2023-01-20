@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={91.692467,182.76321,8568.667};
-		dir[]={0.51395243,-0.5742287,0.63727099};
-		up[]={0.3604838,0.81869501,0.44697884};
-		aside[]={0.77839869,0,-0.62777042};
+		pos[]={3121.3987,139.21478,6503.0405};
+		dir[]={-0.4252103,-0.35063952,0.83441931};
+		up[]={-0.15920465,0.93650967,0.31241807};
+		aside[]={0.89098758,-4.3888576e-008,0.45403674};
 	};
 };
 binarizationWanted=0;
@@ -983,7 +983,7 @@ class CustomAttributes
 		};
 		nAttributes=17;
 	};
-	class Category3
+	class Category4
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1012,7 +1012,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category4
+	class Category5
 	{
 		name="Scenario";
 		class Attribute0
@@ -34668,6 +34668,19 @@ class Mission
 				};
 				class Attribute3
 				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10000;
+						};
+					};
+				};
+				class Attribute4
+				{
 					property="gm_vehicleMarkings_Insignias_HazardSign_attribute";
 					expression="[_this,_value,4,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 					class Value
@@ -34679,7 +34692,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="gm_vehicleMarkings_Insignias_Marking_attribute";
 					expression="[_this,_value,3,2] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34692,7 +34705,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute6
 				{
 					property="potato_setVehicleAmmo_vehAmmoAttribute";
 					expression="[_this, _value] call potato_setVehicleAmmo_fnc_initVehicle";
@@ -34705,7 +34718,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute7
 				{
 					property="gm_vehicleMarkings_tacticalSign_Icon_attribute";
 					expression="[_this,_value,1,2] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34718,7 +34731,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute8
 				{
 					property="gm_vehicleMarkings_Insignias_Platoon_attribute";
 					expression="[_this,_value,3,5] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34731,7 +34744,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute9
 				{
 					property="gm_vehicleMarkings_Insignias_Company_attribute";
 					expression="[_this,_value,3,4] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34744,7 +34757,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute9
+				class Attribute10
 				{
 					property="gm_vehicleMarkings_tacticalSign_PreIcon_attribute";
 					expression="[_this,_value,1,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34757,7 +34770,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute10
+				class Attribute11
 				{
 					property="gm_vehicleMarkings_tacticalSign_PostIcon_attribute";
 					expression="[_this,_value,1,3] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34770,7 +34783,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute11
+				class Attribute12
 				{
 					property="gm_vehicleMarkings_Insignias_Battalion_attribute";
 					expression="[_this,_value,3,3] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34783,7 +34796,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute12
+				class Attribute13
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
@@ -34885,7 +34898,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute13
+				class Attribute14
 				{
 					property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
 					expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34898,7 +34911,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute14
+				class Attribute15
 				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -34911,7 +34924,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute15
+				class Attribute16
 				{
 					property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
 					expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -34924,7 +34937,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=16;
+				nAttributes=17;
 			};
 		};
 		class Item149
@@ -35256,6 +35269,19 @@ class Mission
 				};
 				class Attribute3
 				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10000;
+						};
+					};
+				};
+				class Attribute4
+				{
 					property="gm_vehicleMarkings_Insignias_HazardSign_attribute";
 					expression="[_this,_value,4,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 					class Value
@@ -35267,7 +35293,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="gm_vehicleMarkings_Insignias_Marking_attribute";
 					expression="[_this,_value,3,2] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35280,7 +35306,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute6
 				{
 					property="potato_setVehicleAmmo_vehAmmoAttribute";
 					expression="[_this, _value] call potato_setVehicleAmmo_fnc_initVehicle";
@@ -35293,7 +35319,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute7
 				{
 					property="gm_vehicleMarkings_tacticalSign_Icon_attribute";
 					expression="[_this,_value,1,2] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35306,7 +35332,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute8
 				{
 					property="gm_vehicleMarkings_Insignias_Platoon_attribute";
 					expression="[_this,_value,3,5] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35319,7 +35345,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute9
 				{
 					property="gm_vehicleMarkings_Insignias_Company_attribute";
 					expression="[_this,_value,3,4] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35332,7 +35358,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute9
+				class Attribute10
 				{
 					property="gm_vehicleMarkings_tacticalSign_PreIcon_attribute";
 					expression="[_this,_value,1,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35345,7 +35371,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute10
+				class Attribute11
 				{
 					property="gm_vehicleMarkings_tacticalSign_PostIcon_attribute";
 					expression="[_this,_value,1,3] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35358,7 +35384,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute11
+				class Attribute12
 				{
 					property="gm_vehicleMarkings_Insignias_Battalion_attribute";
 					expression="[_this,_value,3,3] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35371,7 +35397,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute12
+				class Attribute13
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
@@ -35473,7 +35499,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute13
+				class Attribute14
 				{
 					property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
 					expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35486,7 +35512,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute14
+				class Attribute15
 				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -35499,7 +35525,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute15
+				class Attribute16
 				{
 					property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
 					expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35512,7 +35538,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=16;
+				nAttributes=17;
 			};
 		};
 		class Item151
@@ -35789,7 +35815,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10302.105,104.33507,7635.0059};
+				position[]={10302.105,104.33555,7635.0059};
 				angles[]={0.01399754,4.7220755,6.2651906};
 			};
 			side="Empty";
@@ -35802,7 +35828,7 @@ class Mission
 			};
 			id=10595;
 			type="gm_ge_army_kat1_451_reammo";
-			atlOffset=-0.0014877319;
+			atlOffset=-0.0010070801;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35846,6 +35872,19 @@ class Mission
 				};
 				class Attribute3
 				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10000;
+						};
+					};
+				};
+				class Attribute4
+				{
 					property="gm_vehicleMarkings_Insignias_HazardSign_attribute";
 					expression="[_this,_value,4,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
 					class Value
@@ -35857,7 +35896,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="gm_vehicleMarkings_Insignias_Marking_attribute";
 					expression="[_this,_value,3,2] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35870,7 +35909,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute6
 				{
 					property="potato_setVehicleAmmo_vehAmmoAttribute";
 					expression="[_this, _value] call potato_setVehicleAmmo_fnc_initVehicle";
@@ -35883,7 +35922,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute7
 				{
 					property="gm_vehicleMarkings_tacticalSign_Icon_attribute";
 					expression="[_this,_value,1,2] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35896,7 +35935,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute8
 				{
 					property="gm_vehicleMarkings_Insignias_Platoon_attribute";
 					expression="[_this,_value,3,5] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35909,7 +35948,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute9
 				{
 					property="gm_vehicleMarkings_Insignias_Company_attribute";
 					expression="[_this,_value,3,4] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35922,7 +35961,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute9
+				class Attribute10
 				{
 					property="gm_vehicleMarkings_tacticalSign_PreIcon_attribute";
 					expression="[_this,_value,1,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35935,7 +35974,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute10
+				class Attribute11
 				{
 					property="gm_vehicleMarkings_tacticalSign_PostIcon_attribute";
 					expression="[_this,_value,1,3] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35948,7 +35987,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute11
+				class Attribute12
 				{
 					property="gm_vehicleMarkings_Insignias_Battalion_attribute";
 					expression="[_this,_value,3,3] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -35961,7 +36000,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute12
+				class Attribute13
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
@@ -36063,7 +36102,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute13
+				class Attribute14
 				{
 					property="gm_vehicleMarkings_LicensePlates_Numbers_attribute";
 					expression="[_this,_value,0,1] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -36076,7 +36115,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute14
+				class Attribute15
 				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -36089,7 +36128,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute15
+				class Attribute16
 				{
 					property="gm_vehicleMarkings_LicensePlates_Plate_attribute";
 					expression="[_this,_value,0,0] call gm_core_vehicles_fnc_vehicleMarkingsUpdateAttributes;";
@@ -36102,7 +36141,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=16;
+				nAttributes=17;
 			};
 		};
 		class Item153
