@@ -127,6 +127,9 @@
 // Pistol
 #define PISTOL "gm_pm_blk"
 #define PISTOL_MAG "gm_8Rnd_9x18mm_B_pst_pm_blk:2"
+// Flare Pistol
+#define FLARE_PISTOL "gm_lp1_blk"
+#define FLARE_PISTOL_MAG "gm_1Rnd_265mm_flare_single_wht_gc:2,gm_1Rnd_265mm_flare_multi_red_gc:2,gm_1Rnd_265mm_flare_single_red_gc:2,gm_1Rnd_265mm_flare_single_grn_gc:2"
 // Grenades
 #define LEADER_GRENADES BASE_FRAG_OPF,LEADER_SMOKES_OPF
 // Gear
@@ -446,8 +449,9 @@ class Fic_eng: Fic_Soldier_Carbine { // Base ENG
 
 //Demo
 class demol: Fic_eng {// Demolitions Leader
-  magazines[] += {BASE_EXP};
-  backpackItems[] = {RADIO_MR,"gm_repairkit_01"};
+  handguns[] = {FLARE_PISTOL};
+  magazines[] += {FLARE_PISTOL_MAG};
+  backpackItems[] = {RADIO_MR};
 };
 class demo: Fic_eng {// Explosive Specialist
   magazines[] += {BASE_EXP};
