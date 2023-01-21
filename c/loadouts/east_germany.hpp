@@ -452,6 +452,7 @@ class demol: Fic_eng {// Demolitions Leader
   handguns[] = {FLARE_PISTOL};
   magazines[] += {FLARE_PISTOL_MAG};
   backpackItems[] = {RADIO_MR};
+  linkedItems[] += {BINOS};
 };
 class demo: Fic_eng {// Explosive Specialist
   magazines[] += {BASE_EXP};
