@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19954.77,191.88031,8396.3867};
-		dir[]={-0.18136945,-0.56837296,-0.80256391};
-		up[]={-0.12528941,0.82276165,-0.55440891};
-		aside[]={-0.97542727,-2.3224857e-008,0.22043659};
+		pos[]={19870.539,191.88031,8400.4883};
+		dir[]={-0.3167493,-0.66341692,-0.67794615};
+		up[]={-0.28082794,0.74823868,-0.60106349};
+		aside[]={-0.9060182,2.2086897e-007,0.42331192};
 	};
 };
 binarizationWanted=0;
@@ -29289,7 +29289,7 @@ class Mission
 												class data
 												{
 													singleType="SCALAR";
-													value=0;
+													value=1;
 												};
 											};
 											class Item2
@@ -29305,7 +29305,7 @@ class Mission
 												class data
 												{
 													singleType="SCALAR";
-													value=0;
+													value=1;
 												};
 											};
 											class Item4
@@ -29321,7 +29321,7 @@ class Mission
 												class data
 												{
 													singleType="SCALAR";
-													value=0;
+													value=1;
 												};
 											};
 										};
@@ -58670,7 +58670,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19860.645,138.76801,8341.1885};
+				position[]={19860.645,138.76802,8341.1885};
 				angles[]={6.2691875,4.9424233,0.0019896752};
 			};
 			side="Empty";
@@ -58680,7 +58680,6 @@ class Mission
 			};
 			id=13722;
 			type="CUP_BOX_GER_AmmoOrd_F";
-			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
