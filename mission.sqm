@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=996;
+		nextID=1072;
 	};
 	class Camera
 	{
 		pos[]={10301.833,120.56513,7627.4907};
-		dir[]={-0.0059509287,-0.89287406,0.45026717};
-		up[]={-0.011799586,0.45030642,0.8927961};
-		aside[]={0.99991268,4.6566129e-010,0.013215286};
+		dir[]={-0.80457759,-0.2852053,0.52087849};
+		up[]={-0.23941374,0.95846677,0.15499502};
+		aside[]={0.54345012,4.4819899e-008,0.83944291};
 	};
 };
 binarizationWanted=0;
@@ -466,8 +466,9 @@ class ScenarioData
 {
 	author="Phoenix and Stalin";
 	loadScreen="\z\potato\addons\missionModules\images\loadlogo.paa";
+	respawnDialog=0;
 	disabledAI=1;
-	respawn=1;
+	respawn=3;
 	class Header
 	{
 		gameType="CMFTVT";
@@ -995,18 +996,6 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								singleType="STRING";
-								value="potato_spectate";
-							};
-						};
-					};
 				};
 			};
 		};
@@ -1042,7 +1031,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=85;
+									items=89;
 									class Item0
 									{
 										class data
@@ -1723,6 +1712,38 @@ class CustomAttributes
 											value="tun_respawn_allowcheckticketsbase";
 										};
 									};
+									class Item85
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_killjip";
+										};
+									};
+									class Item86
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_gearscripttype";
+										};
+									};
+									class Item87
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_briefingenableshowtickets";
+										};
+									};
+									class Item88
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tun_respawn_briefingenableshowtime";
+										};
+									};
 								};
 							};
 						};
@@ -1733,7 +1754,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=85;
+									items=89;
 									class Item0
 									{
 										class data
@@ -3880,7 +3901,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=200;
+														value=427;
 													};
 												};
 												class Item1
@@ -3907,7 +3928,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=300;
+														value=382;
 													};
 												};
 												class Item1
@@ -4003,6 +4024,114 @@ class CustomAttributes
 										};
 									};
 									class Item84
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item85
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item86
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Potato Tool";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item87
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item88
 									{
 										class data
 										{
