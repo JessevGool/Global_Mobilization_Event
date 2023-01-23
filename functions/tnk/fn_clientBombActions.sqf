@@ -20,7 +20,7 @@
     "Plant Explosives (10s)",  
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",  
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",  
-    "(_this distance _target < 5 && side _this isEqualTo EAST && [_this, 'SatchelCharge_Remote_Mag'] call BIS_fnc_hasItem)",  
+    "(_this distance _target < 5 && side _this isEqualTo WEST && [_this, 'SatchelCharge_Remote_Mag'] call BIS_fnc_hasItem)",  
     "(_caller distance _target < 5)",  
     {},  
     {},

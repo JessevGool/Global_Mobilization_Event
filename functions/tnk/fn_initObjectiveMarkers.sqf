@@ -13,18 +13,18 @@
 	Locality:
 		Player only
 */
-if (side player isEqualTo WEST) then {
+if (side player isEqualTo EAST) then {
 	_obj = [
-		sector1ammo,
-		sector1fuel,
-		sector2ammo,
-		sector2fuel,
-		sector3ammo,
-		sector3fuel
-		// sector4ammo,
-		// sector4fuel,
-		// sector5ammo,
-		// sector5fuel
+		// sector1ammo,
+		// sector1fuel,
+		// sector2ammo,
+		// sector2fuel,
+		// sector3ammo,
+		// sector3fuel
+		sector4ammo,
+		sector4fuel,
+		sector5ammo,
+		sector5fuel
 		];
 	{
 		_objmarker = "marker_" + str(_x);

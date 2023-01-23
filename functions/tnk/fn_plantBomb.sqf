@@ -28,296 +28,300 @@ params["_bomb","_planter","_actionID"];
 // Start and notify countdown
 // Switches code block based on what objective got "planted", aka _bomb
 switch (_bomb) do {
-	case sector1fuel: {
-		_countDown = DEFUSETIME;
-		sector1fuelPlanted = true;
+	// case sector1fuel: {
+	// 	_countDown = DEFUSETIME;
+	// 	sector1fuelPlanted = true;
 
-		// Add defuse holdaction
-		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+	// 	// Add defuse holdaction
+	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
-		// Destruction countdown loop
-		while {sector1fuelPlanted && _countDown >= 0} do {
-			if (_countDown % 5 == 0 && _countDown > 10) then {
-				_bombText = "Bomb Planted on Sector 1 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-				_bombText remoteExec ["systemChat",0,false];
-			};
-			if (_countDown <= 10) then {
-				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-				_bombText = "Bomb Planted on Sector 1 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-				_bombText remoteExec ["systemChat",0,false];
-			};
-			if (_countDown == 0) then {
-				removeAllActions sector1fuel;
-				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-				_bomb setDamage 1;
-				_bombText = "A Sector 1 Objective has been destroyed by East Germany!";
-				_bombText remoteExec ["systemChat",0,false];
-				sector1FuelDestroyed = true;
-			};
-			_countDown = _countDown - 1;
-			uiSleep 1;
-		};
-	};
-	case sector1ammo: {
-		_countDown = DEFUSETIME;
-		sector1AmmoPlanted = true;
+	// 	// Destruction countdown loop
+	// 	while {sector1fuelPlanted && _countDown >= 0} do {
+	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
+	// 			_bombText = "Bomb Planted on Sector 1 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown <= 10) then {
+	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+	// 			_bombText = "Bomb Planted on Sector 1 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown == 0) then {
+	// 			removeAllActions sector1fuel;
+	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+	// 			_bomb setDamage 1;
+	// 			_bombText = "A Sector 1 Objective has been destroyed by East Germany!";
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 			sector1FuelDestroyed = true;
+	// 		};
+	// 		_countDown = _countDown - 1;
+	// 		uiSleep 1;
+	// 	};
+	// };
+	// case sector1ammo: {
+	// 	_countDown = DEFUSETIME;
+	// 	sector1AmmoPlanted = true;
 
-		// Add defuse holdaction
-		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+	// 	// Add defuse holdaction
+	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
-		// Destruction countdown loop
-		while {sector1AmmoPlanted && _countDown >= 0} do {
-			if (_countDown % 5 == 0 && _countDown > 10) then {
-				_bombText = "Bomb Planted on Sector 1 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-				_bombText remoteExec ["systemChat",0,false];
-			};
-			if (_countDown <= 10) then {
-				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-				_bombText = "Bomb Planted on Sector 1 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-				_bombText remoteExec ["systemChat",0,false];
-			};
-			if (_countDown == 0) then {
-				removeAllActions sector1ammo;
-				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-				_bomb setDamage 1;
-				_bombText = "A Sector 1 Objective has been destroyed by East Germany!";
-				_bombText remoteExec ["systemChat",0,false];
-				sector1AmmoDestroyed = true;
-			};
-			_countDown = _countDown - 1;
-			uiSleep 1;
-		};
-	};
-	case sector2fuel: {
-		_countDown = DEFUSETIME;
-		sector2FuelPlanted = true;
+	// 	// Destruction countdown loop
+	// 	while {sector1AmmoPlanted && _countDown >= 0} do {
+	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
+	// 			_bombText = "Bomb Planted on Sector 1 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown <= 10) then {
+	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+	// 			_bombText = "Bomb Planted on Sector 1 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown == 0) then {
+	// 			removeAllActions sector1ammo;
+	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+	// 			_bomb setDamage 1;
+	// 			_bombText = "A Sector 1 Objective has been destroyed by East Germany!";
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 			sector1AmmoDestroyed = true;
+	// 		};
+	// 		_countDown = _countDown - 1;
+	// 		uiSleep 1;
+	// 	};
+	// };
+	// case sector2fuel: {
+	// 	_countDown = DEFUSETIME;
+	// 	sector2FuelPlanted = true;
 		
-		// Add defuse holdaction
-		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+	// 	// Add defuse holdaction
+	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
-		// Destruction countdown loop
-		while {sector2FuelPlanted && _countDown >= 0} do {
-			if (_countDown % 5 == 0 && _countDown > 10) then {
-				_bombText = "Bomb Planted on Sector 2 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-				_bombText remoteExec ["systemChat",0,false];
-			};
-			if (_countDown <= 10) then {
-				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-				_bombText = "Bomb Planted on Sector 2 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-				_bombText remoteExec ["systemChat",0,false];
-			};
-			if (_countDown == 0) then {
-				removeAllActions sector2fuel;
-				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-				_bomb setDamage 1;
-				_bombText = "A Sector 2 Objective has been destroyed by East Germany!";
-				_bombText remoteExec ["systemChat",0,false];
-				sector2FuelDestroyed = true;
-			};
-			_countDown = _countDown - 1;
-			uiSleep 1;
-		};
-	};
-	case sector2ammo: {
+	// 	// Destruction countdown loop
+	// 	while {sector2FuelPlanted && _countDown >= 0} do {
+	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
+	// 			_bombText = "Bomb Planted on Sector 2 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown <= 10) then {
+	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+	// 			_bombText = "Bomb Planted on Sector 2 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown == 0) then {
+	// 			removeAllActions sector2fuel;
+	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+	// 			_bomb setDamage 1;
+	// 			_bombText = "A Sector 2 Objective has been destroyed by East Germany!";
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 			sector2FuelDestroyed = true;
+	// 		};
+	// 		_countDown = _countDown - 1;
+	// 		uiSleep 1;
+	// 	};
+	// };
+	// case sector2ammo: {
+	// 	_countDown = DEFUSETIME;
+	// 	sector2AmmoPlanted = true;
+
+	// 	// Add defuse holdaction
+	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+
+	// 	// Destruction countdown loop
+	// 	while {sector2AmmoPlanted && _countDown >= 0} do {
+	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
+	// 			_bombText = "Bomb Planted on Sector 2 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown <= 10) then {
+	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+	// 			_bombText = "Bomb Planted on Sector 2 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown == 0) then {
+	// 			removeAllActions sector2ammo;
+	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+	// 			_bomb setDamage 1;
+	// 			_bombText = "A Sector 2 Objective has been destroyed by East Germany!";
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 			sector2AmmoDestroyed = true;
+	// 		};
+	// 		_countDown = _countDown - 1;
+	// 		uiSleep 1;
+	// 	};
+	// };
+	// case sector3fuel: {
+	// 	_countDown = DEFUSETIME;
+	// 	sector3FuelPlanted = true;
+				
+	// 	// Add defuse holdaction
+	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+
+	// 	// Destruction countdown loop
+	// 	while {sector3FuelPlanted && _countDown >= 0} do {
+	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
+	// 			_bombText = "Bomb Planted on Sector 3 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown <= 10) then {
+	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+	// 			_bombText = "Bomb Planted on Sector 3 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown == 0) then {
+	// 			removeAllActions sector3fuel;
+	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+	// 			_bomb setDamage 1;
+	// 			_bombText = "A Sector 3 Objective has been destroyed by East Germany!";
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 			sector3FuelDestroyed = true;
+	// 		};
+	// 		_countDown = _countDown - 1;
+	// 		uiSleep 1;
+	// 	};
+	// };
+	// case sector3ammo: {
+	// 	_countDown = DEFUSETIME;
+	// 	sector3AmmoPlanted = true;
+				
+	// 	// Add defuse holdaction
+	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+
+	// 	// Destruction countdown loop
+	// 	while {sector3AmmoPlanted && _countDown >= 0} do {
+	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
+	// 			_bombText = "Bomb Planted on Sector 3 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown <= 10) then {
+	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+	// 			_bombText = "Bomb Planted on Sector 3 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 		};
+	// 		if (_countDown == 0) then {
+	// 			removeAllActions sector3ammo;
+	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+	// 			_bomb setDamage 1;
+	// 			_bombText = "A Sector 3 Objective has been destroyed by East Germany!";
+	// 			_bombText remoteExec ["systemChat",0,false];
+	// 			sector3AmmoDestroyed = true;
+	// 		};
+	// 		_countDown = _countDown - 1;
+	// 		uiSleep 1;
+	// 	};
+	// };
+	case sector4fuel: {
 		_countDown = DEFUSETIME;
-		sector2AmmoPlanted = true;
-
+		sector4FuelPlanted = true;
+				
 		// Add defuse holdaction
 		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
 		// Destruction countdown loop
-		while {sector2AmmoPlanted && _countDown >= 0} do {
+		while {sector4FuelPlanted && _countDown >= 0} do {
 			if (_countDown % 5 == 0 && _countDown > 10) then {
-				_bombText = "Bomb Planted on Sector 2 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText = "Bomb Planted on Sector 4 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown <= 10) then {
 				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-				_bombText = "Bomb Planted on Sector 2 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText = "Bomb Planted on Sector 4 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
-				removeAllActions sector2ammo;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
-				_bombText = "A Sector 2 Objective has been destroyed by East Germany!";
+				_bombText = "A Sector 4 Objective has been destroyed by West Germany!";
 				_bombText remoteExec ["systemChat",0,false];
-				sector2AmmoDestroyed = true;
+				sector4FuelDestroyed = true;
 			};
 			_countDown = _countDown - 1;
 			uiSleep 1;
 		};
 	};
-	case sector3fuel: {
+	case sector4ammo: {
 		_countDown = DEFUSETIME;
-		sector3FuelPlanted = true;
+		sector4AmmoPlanted = true;
 				
 		// Add defuse holdaction
 		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
 		// Destruction countdown loop
-		while {sector3FuelPlanted && _countDown >= 0} do {
+		while {sector4AmmoPlanted && _countDown >= 0} do {
 			if (_countDown % 5 == 0 && _countDown > 10) then {
-				_bombText = "Bomb Planted on Sector 3 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText = "Bomb Planted on Sector 4 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown <= 10) then {
 				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-				_bombText = "Bomb Planted on Sector 3 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText = "Bomb Planted on Sector 4 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
-				removeAllActions sector3fuel;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
-				_bombText = "A Sector 3 Objective has been destroyed by East Germany!";
+				_bombText = "A Sector 4 Objective has been destroyed by West Germany!";
 				_bombText remoteExec ["systemChat",0,false];
-				sector3FuelDestroyed = true;
+				sector4AmmoDestroyed = true;
 			};
 			_countDown = _countDown - 1;
 			uiSleep 1;
 		};
 	};
-	case sector3ammo: {
+	case sector5fuel: {
 		_countDown = DEFUSETIME;
-		sector3AmmoPlanted = true;
+		sector5FuelPlanted = true;
 				
 		// Add defuse holdaction
 		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
 		// Destruction countdown loop
-		while {sector3AmmoPlanted && _countDown >= 0} do {
+		while {sector5FuelPlanted && _countDown >= 0} do {
 			if (_countDown % 5 == 0 && _countDown > 10) then {
-				_bombText = "Bomb Planted on Sector 3 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText = "Bomb Planted on Sector 5 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown <= 10) then {
 				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-				_bombText = "Bomb Planted on Sector 3 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText = "Bomb Planted on Sector 5 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
 				_bombText remoteExec ["systemChat",0,false];
 			};
 			if (_countDown == 0) then {
-				removeAllActions sector3ammo;
 				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
 				_bomb setDamage 1;
-				_bombText = "A Sector 3 Objective has been destroyed by East Germany!";
+				_bombText = "A Sector 5 Objective has been destroyed by West Germany!";
 				_bombText remoteExec ["systemChat",0,false];
-				sector3AmmoDestroyed = true;
+				sector5FuelDestroyed = true;
 			};
 			_countDown = _countDown - 1;
 			uiSleep 1;
 		};
 	};
-	// case sector4fuel: {
-	// 	_countDown = DEFUSETIME;
-	// 	sector4FuelPlanted = true;
+	case sector5ammo: {
+		_countDown = DEFUSETIME;
+		sector5AmmoPlanted = true;
 				
-	// 	// Add defuse holdaction
-	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
+		// Add defuse holdaction
+		[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
 
-	// 	// Destruction countdown loop
-	// 	while {sector4FuelPlanted && _countDown >= 0} do {
-	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
-	// 			_bombText = "Bomb Planted on Sector 4 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown <= 10) then {
-	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-	// 			_bombText = "Bomb Planted on Sector 4 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown == 0) then {
-	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-	// 			_bomb setDamage 1;
-	// 			_bombText = "A Sector 4 Objective has been destroyed by East Germany!";
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		_countDown = _countDown - 1;
-	// 		uiSleep 1;
-	// 	};
-	// };
-	// case sector4ammo: {
-	// 	_countDown = DEFUSETIME;
-	// 	sector4AmmoPlanted = true;
-				
-	// 	// Add defuse holdaction
-	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
-
-	// 	// Destruction countdown loop
-	// 	while {sector4AmmoPlanted && _countDown >= 0} do {
-	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
-	// 			_bombText = "Bomb Planted on Sector 4 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown <= 10) then {
-	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-	// 			_bombText = "Bomb Planted on Sector 4 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown == 0) then {
-	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-	// 			_bomb setDamage 1;
-	// 			_bombText = "A Sector 4 Objective has been destroyed by East Germany!";
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		_countDown = _countDown - 1;
-	// 		uiSleep 1;
-	// 	};
-	// };
-	// case sector5fuel: {
-	// 	_countDown = DEFUSETIME;
-	// 	sector5FuelPlanted = true;
-				
-	// 	// Add defuse holdaction
-	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
-
-	// 	// Destruction countdown loop
-	// 	while {sector5FuelPlanted && _countDown >= 0} do {
-	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
-	// 			_bombText = "Bomb Planted on Sector 5 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown <= 10) then {
-	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-	// 			_bombText = "Bomb Planted on Sector 5 Fuel: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown == 0) then {
-	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-	// 			_bomb setDamage 1;
-	// 			_bombText = "A Sector 5 Objective has been destroyed by East Germany!";
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		_countDown = _countDown - 1;
-	// 		uiSleep 1;
-	// 	};
-	// };
-	// case sector5ammo: {
-	// 	_countDown = DEFUSETIME;
-	// 	sector5AmmoPlanted = true;
-				
-	// 	// Add defuse holdaction
-	// 	[_bomb] remoteExec ["CCO_fnc_defuseBomb",2];
-
-	// 	// Destruction countdown loop
-	// 	while {sector5AmmoPlanted && _countDown >= 0} do {
-	// 		if (_countDown % 5 == 0 && _countDown > 10) then {
-	// 			_bombText = "Bomb Planted on Sector 5 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown <= 10) then {
-	// 			playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
-	// 			_bombText = "Bomb Planted on Sector 5 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		if (_countDown == 0) then {
-	// 			"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
-	// 			_bomb setDamage 1;
-	// 			_bombText = "A Sector 5 Objective has been destroyed by East Germany!";
-	// 			_bombText remoteExec ["systemChat",0,false];
-	// 		};
-	// 		_countDown = _countDown - 1;
-	// 		uiSleep 1;
-	// 	};
-	// };
+		// Destruction countdown loop
+		while {sector5AmmoPlanted && _countDown >= 0} do {
+			if (_countDown % 5 == 0 && _countDown > 10) then {
+				_bombText = "Bomb Planted on Sector 5 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText remoteExec ["systemChat",0,false];
+			};
+			if (_countDown <= 10) then {
+				playSound3D ["A3\Sounds_F\sfx\alarm.wss", _bomb, false, getposasl _bomb, 0.6, 1, 175];
+				_bombText = "Bomb Planted on Sector 5 Ammo: " + ([_countDown,"MM:SS"] call BIS_fnc_secondsToString);
+				_bombText remoteExec ["systemChat",0,false];
+			};
+			if (_countDown == 0) then {
+				"Bo_GBU12_LGB" createVehicle (getposATL _bomb);
+				_bomb setDamage 1;
+				_bombText = "A Sector 5 Objective has been destroyed by West Germany!";
+				_bombText remoteExec ["systemChat",0,false];
+				sector5AmmoDestroyed = true;
+			};
+			_countDown = _countDown - 1;
+			uiSleep 1;
+		};
+	};
 };
