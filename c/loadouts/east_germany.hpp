@@ -226,7 +226,7 @@ class sl: ftl {// SL
   backpack[] = {CAMO_BACKPACK_SL};
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
-  linkedItems[] = {LINKED,LEADER_LINKED};
+  linkedItems[] += {LINKED,LEADER_LINKED};
   items[] += {RADIO_MR};
 };
 class plt: sl {// Platoon Leader
