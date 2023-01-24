@@ -139,13 +139,21 @@
 #define LEADER_LINKED BASE_LEADER_LINKED
 #define CARRYALL "B_Carryall_mcamo"
 #define GOG
+// Ammo
+#define AMMO_RIFLE "gm_30Rnd_762x39mm_B_T_57N231P_ak47_blk:400"
+#define AMMO_AR "gm_100Rnd_762x54mmR_B_T_7t2_pk_grn:200"
+#define AMMO_AT "gm_1Rnd_40mm_heat_pg7vl_rpg7:60"
+#define AMMO_GL "1Rnd_HE_Grenade_shell:100" , "1Rnd_Smoke_Grenade_shell:100" , "1Rnd_SmokeRed_Grenade_shell:2"
+#define AMMO_GRENADE "gm_handgrenade_frag_rgd5:60" , "SmokeShell:100"
+#define AMMO_MEDICAL "ACE_packingBandage:250","ACE_elasticBandage:250","ACE_splint:25"
+#define AMMO_FLARE "UGL_FlareYellow_F:2"
 
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
-class RHS_Ural_Flat_MSV_01 {
+class gm_gc_army_ural4320_reammo {
 	TransportWeapons[] = {};
-	TransportMagazines[] = {};
-	TransportItems[] = {TOOLKIT};
+	TransportMagazines[] = {AMMO_RIFLE, AMMO_AR, AMMO_AT, AMMO_GL, AMMO_GRENADE, AMMO_FLARE};
+	TransportItems[] = {AMMO_MEDICAL};
 };
 
 class Car {
