@@ -98,6 +98,7 @@ CCO_vehs =
 	[east_arty_1,	false,	(30*60),	{}],
 	[east_helo_1,	true,	(15*60),	{}]
 
+
 ];
 
 // input allowed crew classes for GROUND vehicles
@@ -125,7 +126,10 @@ AllowedAirCrew =
 
 // banned magazines
 VehBannedMagazines =
-[];
+[
+	"CUP_340rnd_TE1_Green_Tracer_30mmHEIF_2a42_m",
+	"gm_2000Rnd_23x152mm_hei_t_ofzt"
+];
 
 /*
 END USER CONFIG
@@ -394,3 +398,10 @@ waitUntil {time > 3};
 	// short sleep to avoid overload
 	UIsleep 0.25;
 } forEach CCO_vehs;
+
+/**
+gm_gc_army_t55am2b
+gm_gc_army_zsu234v1
+cwr3_o_bmp2
+gm_gc_army_uaz469_spg9
+ */
