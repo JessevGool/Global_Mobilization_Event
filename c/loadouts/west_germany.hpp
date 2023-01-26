@@ -66,7 +66,7 @@
 #define HAT "gm_milan_launcher_weaponBag"
 // SAM
 #define SAM "gm_fim43_oli"
-#define SAM_MAG "gm_1Rnd_70mm_he_m585_fim43:3"
+#define SAM_MAG "gm_1Rnd_70mm_he_m585_fim43:2"
 #define SAM_MAG2 "gm_1Rnd_70mm_he_m585_fim43:2"
 // Sniper Rifle
 #define SNIPER "gm_g3a3_dmr_oli"
@@ -342,23 +342,24 @@ class hatg : rifleman
 };
 class hatag : rifleman
 { // HAT Spotter
-  backpack[] = {CARRYALL};
+  items[] += {RADIO_SR};
+  linkedItems[] += {BINOS};
 };
 
 // SAM
 class msaml : sl
 { // SAM Lead
-  backpack[] = {CARRYALL};
   magazines[] += {SAM_MAG2};
 };
 class msamg : Fic_Soldier_Carbine
 { // SAM Gunner
-  SAM_GEAR(CARRYALL, SAM_MAG)
+  magazines[] += {SAM_MAG};
   launchers[] = {SAM};
 };
 class msamag : Fic_Spotter
 { // SAM Spotter/Ammo Bearer
-  SAM_GEAR(CARRYALL, SAM_MAG2)
+  magazines[] += {SAM_MAG2};
+  items[] += {BINOS};
 };
 
 // Mortar
