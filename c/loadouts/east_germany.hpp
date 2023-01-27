@@ -350,12 +350,10 @@ class hatl: sl {// HAT Lead
 };
 class hatg: rifleman {// HAT Gunner
   backpack[] = {HAT};
-  magazines[] += {HAT_MAG};
 };
 class hatag: rifleman {// HAT Spotter
-  backpack[] = {CARRYALL};
-  magazines[] += {HAT_MAG};
-  launchers[] = {HAT_TRI_HI};
+  backpack[] = {CAMO_BACKPACK};
+  linkedItems[] += {BINOS};
 };
 
 //SAM
