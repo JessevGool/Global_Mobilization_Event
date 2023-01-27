@@ -151,9 +151,11 @@ SFP_fnc_giveAmmoTypes =
 		_veh removeMagazinesTurret ["gm_15Rnd_100x695mm_apfsds_t_bm20", [0]];
 		_veh removeMagazinesTurret ["gm_21Rnd_100x695mm_he_of412", [0]];
 		_veh removeMagazinesTurret ["gm_22Rnd_100x695mm_apfsds_t_bm8", [0]];
+		["Eyo we should be reomving ammo"] remoteExec ["systemChat",0] ;
 		for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
 		{
 		_veh addMagazineTurret ["gm_15Rnd_100x695mm_apfsds_t_bm20", [0]];
+		["Adding ammo"] remoteExec ["systemChat",0] ;
 		}
 	};
 	if(_class isEqualTo "cwr3_o_bmp2") then {
@@ -204,12 +206,11 @@ JST_fnc_addVehRespawnHandlers =
 		"Reloaded",
 		{
 			params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
-			private _class = typeOf _unitVar;
-			[_unitVar,_class] call SFP_fnc_giveAmmoTypes;
+			private _class = typeOf _unit;
+			// [_unit,_class] spawn SFP_fnc_giveAmmoTypes;
 			{
 				_unit removeMagazinesTurret [_x, [0]];
 			} forEach VehBannedMagazines;
-
 		}
 	];
 
@@ -353,7 +354,7 @@ JST_fnc_vehRespawn =
 	} forEach VehBannedMagazines;
 	private _class = typeOf _unitVar;
 
-	[_unitVar,_class] call SFP_fnc_giveAmmoTypes;
+	[_unitVar,_class] remoteExec ["SFP_fnc_giveAmmoTypes",2];
 
 	// recreate attached objects, if any
 	if ((count _attObjs) > 0) then
@@ -437,10 +438,3 @@ waitUntil {time > 3};
 	// short sleep to avoid overload
 	UIsleep 0.25;
 } forEach CCO_vehs;
-
-/**
-gm_gc_army_t55am2b
-gm_gc_army_zsu234v1
-cwr3_o_bmp2
-gm_gc_army_uaz469_spg9
- */
