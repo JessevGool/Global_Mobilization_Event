@@ -197,7 +197,7 @@ JST_fnc_addVehRespawnHandlers =
 			[_unit, _vehArray] remoteExec ["JST_fnc_vehRespawn", 2];
 		}
 	];
-
+	//merge
 	//remove all banned ammo when reloaded by ammo truck
 	_veh addEventHandler
 	[
