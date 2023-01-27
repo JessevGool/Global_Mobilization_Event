@@ -167,6 +167,23 @@ JST_fnc_addVehRespawnHandlers =
 			[_unit, _vehArray] remoteExec ["JST_fnc_vehRespawn", 2];
 		}
 	];
+	// Check for magazines above 5 for HE
+	_veh addEventHandler
+	[
+		"Fired",
+		{
+			params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+
+			if (_magazine in VehBannedMagazines) then {
+				_unit removeMagazinesTurret [_magazine,[0]];
+				for [{ _i = 0 }, { _i < 3 }, { _i = _i + 1 }] do
+				{
+					_unit addMagazineTurret [_magazine, [0]];
+				};
+			};
+			}
+		}
+	];
 	// deleted: remove all handlers, start respawn loop
 	_veh addEventHandler
 	[
