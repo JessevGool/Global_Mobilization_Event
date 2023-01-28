@@ -61,10 +61,10 @@
 #define MMG_ATT ""
 
 // MAT
-#define MAT "gm_rpg7_wud"
-#define MAT_MAG "gm_1Rnd_40mm_heat_pg7vl_rpg7:2"
-#define MAT_MAG2 "gm_1Rnd_40mm_heat_pg7vl_rpg7:2"
-#define MAT_OPTIC "gm_pgo7v_blk"
+#define MAT "CUP_launch_RPG7V"
+#define MAT_MAG "CUP_PG7VL_M:2"
+#define MAT_MAG2 "CUP_OG7_M:1"
+#define MAT_OPTIC "cup_optic_pgo7v3"
 
 // Facewear
 #define GOG ""
@@ -266,17 +266,20 @@ class ar: rifleman {// AR
   weapons[] = {MMG};
   magazines[] = {MMG_MAG,PISTOL_MAG,BASE_GRENADES_OPF};
   handguns[] = {PISTOL};
+  items[] += {RADIO_SR};
 };
 class aar: rifleman {// AAR
   backpackItems[] += {MMG_MAG};
   linkedItems[] += {BINOS};
 };
 class lat: Fic_Soldier_Carbine {// RAT
-  magazines[] += {MAT_MAG};
+  magazines[] += {MAT_MAG,MAT_MAG2};
   launchers[] = {MAT};
+  attachments[] += {MAT_OPTIC};
 };
 class rifleman_02: rifleman {// Grenadier
- backpackItems[] += {MAT_MAG}; 
+  weapons[] = {GLRIFLE};
+  magazines[] = {GLRIFLE_MAG, GLRIFLE_MAG_HE, GLRIFLE_MAG_SMOKE, GLRIFLE_MAG_FLARE, BASE_GRENADES_OPF};
 };
 
 
@@ -354,6 +357,7 @@ class hatg: rifleman {// HAT Gunner
 };
 class hatag: rifleman {// HAT Spotter
   backpack[] = {CAMO_BACKPACK};
+  items[] += {RADIO_SR};
   linkedItems[] += {BINOS};
 };
 
@@ -434,12 +438,12 @@ class vicc: Fic_Soldier_Carbine {// Crew
   headgear[] = {CREW_HELMET};
   backpack[] = {CREW_BACKPACK};
   magazines[] = {CARBINE_MAG,CREW_GRENADES_OPF};
-  backpackItems[] = {SIDE_KEY,RADIO_LR,RADIO_MR};
+  backpackItems[] = {SIDE_KEY,RADIO_LR,RADIO_MR,RADIO_SR};
   linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
   items[] += {BASE_MEDICAL};
 };
 class vicd: vicc {// Repair Specialist
-  backpackItems[] = {"gm_repairkit_01",RADIO_MR,SIDE_KEY};
+  backpackItems[] = {"gm_repairkit_01",SIDE_KEY};
   linkedItems[] = {LINKED,LEADER_LINKED};
 };
 class vicl: vicc {// Vehicle Commander
