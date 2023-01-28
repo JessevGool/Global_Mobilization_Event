@@ -143,10 +143,10 @@
 #define AMMO_RIFLE "gm_30Rnd_762x39mm_B_T_57N231P_ak47_blk:400"
 #define AMMO_AR "gm_100Rnd_762x54mmR_B_T_7t2_pk_grn:200"
 #define AMMO_AT "gm_1Rnd_40mm_heat_pg7vl_rpg7:60"
-#define AMMO_GL "1Rnd_HE_Grenade_shell:100" , "1Rnd_Smoke_Grenade_shell:100" , "1Rnd_SmokeRed_Grenade_shell:2"
+#define AMMO_GL "1Rnd_HE_Grenade_shell:100" , "1Rnd_Smoke_Grenade_shell:100" , "1Rnd_SmokeRed_Grenade_shell:50"
 #define AMMO_GRENADE "gm_handgrenade_frag_rgd5:60" , "SmokeShell:100"
 #define AMMO_MEDICAL "ACE_packingBandage:250","ACE_elasticBandage:250","ACE_splint:25"
-#define AMMO_FLARE "UGL_FlareYellow_F:2"
+#define AMMO_FLARE "UGL_FlareYellow_F:100"
 
 // Specialized Resupply Vehicle Loadouts
 // Ammo Truck
@@ -251,10 +251,11 @@ class fac: coy {// FAC
 //Medics
 class sm: Fic_Soldier_Carbine {// Medic
   magazines[] = {CARBINE_MAG,MEDIC_GRENADES_OPF};
-  backpackItems[] = {MEDIC_MEDICAL};
-  items[] += {};
+  backpackItems[] = {MEDIC_MEDICAL, RADIO_LR};
+  items[] += {RADIO_SR};
 };
 class plm: sm {// Platoon Medic
+  items[] += {RADIO_MR};
 };
 class cm: plm {// Company Medic
 };
