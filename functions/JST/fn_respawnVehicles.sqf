@@ -88,8 +88,6 @@ CCO_vehs =
 	[east_truck_2,	false,	(5*60),		{}],
 	[east_truck_3,	false,	(5*60),		{}],
 	[east_truck_4,	false,	(5*60),		{}],
-	[east_truck_ammo,	false,	(5*60),	{}],
-	[east_truck_fuel,	false,	(5*60),	{}],
 	[east_truck_repair,	false,	(5*60),	{}],
 	[east_ifv_1,	true,	(0.5*60),	{}],
 	[east_ifv_2,	true,	(15*60),	{}]
@@ -131,9 +129,11 @@ VehBannedMagazines =
 	"CUP_30Rnd_122mmWP_D30_M",
 	"CUP_30Rnd_122mmLASER_D30_M",
 	"CUP_30Rnd_122mmSMOKE_D30_M",
-	"CUP_30Rnd_122mmILLUM_D30_M"
+	"CUP_30Rnd_122mmILLUM_D30_M",
+	"gm_11Rnd_100x695mm_he_of412",
+	"gm_15Rnd_100x695mm_apfsds_t_bm20",
+	"gm_10Rnd_100x695mm_heat_t_bk5m"
 ];
-
 /*
 END USER CONFIG
 */
@@ -143,18 +143,18 @@ publicVariable "CCO_vehs";
 publicVariable "AllowedGroundCrew";
 publicVariable "AllowedAirCrew";
 
-
 SFP_fnc_giveAmmoTypes =
 {
 	params["_veh","_class"];
-	if (_class isEqualTo "gm_gc_army_t55") then {
-		_veh removeMagazinesTurret ["gm_15Rnd_100x695mm_apfsds_t_bm20", [0]];
-		_veh removeMagazinesTurret ["gm_21Rnd_100x695mm_he_of412", [0]];
-		_veh removeMagazinesTurret ["gm_22Rnd_100x695mm_apfsds_t_bm8", [0]];
+	if (_class isEqualTo "gm_gc_army_t55am2b") then {
+		_veh removeMagazinesTurret ["gm_10Rnd_100x695mm_heat_t_bk5m", [0]];
+		_veh removeMagazinesTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
+		_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
 		["Eyo we should be reomving ammo"] remoteExec ["systemChat",0] ;
 		for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
 		{
-		_veh addMagazineTurret ["gm_15Rnd_100x695mm_apfsds_t_bm20", [0]];
+		_veh addMagazineTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
+
 		["Adding ammo"] remoteExec ["systemChat",0] ;
 		}
 	};
