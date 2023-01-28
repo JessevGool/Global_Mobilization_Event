@@ -80,24 +80,20 @@ CCO_vehs =
 	[west_arty_1,	true,	(30*60),	{}],
 	[west_arty_2,	true,	(30*60),	{}],
 	//EAST
-	[east_tank_1,	true,	(5*60),		{}],
-	[east_tank_2,	true,	(5*60),		{}],
-	[east_tank_3,	true,	(5*60),		{}],
-	[east_tank_4,	true,	(5*60),		{}],
-	[east_tank_5,	true,	(5*60),		{}],
-	[east_tank_6,	true,	(5*60),		{}],
-	[east_tank_7,	true,	(5*60),		{}],
-	[east_aa_1,		true,	(20*60),	{}],
-	[east_apc_1,	false,	(10*60),	{}],
-	[east_bike_1,	false,	(5*60),		{}],
-	[east_bike_2,	false,	(5*60),		{}],
+	[east_469_1,	false,	(5*60),		{}],
+	[east_469_2,	false,	(5*60),		{}],
+	[east_tank_1,	true,	(0.5*60),	{}],
+	[east_tank_2,	true,	(15*60),	{}],
 	[east_truck_1,	false,	(5*60),		{}],
 	[east_truck_2,	false,	(5*60),		{}],
 	[east_truck_3,	false,	(5*60),		{}],
 	[east_truck_4,	false,	(5*60),		{}],
-	[east_arty_1,	false,	(30*60),	{}],
-	[east_helo_1,	true,	(15*60),	{}]
-
+	[east_truck_repair,	false,	(5*60),	{}],
+	[east_ifv_1,	true,	(0.5*60),	{}],
+	[east_ifv_2,	true,	(15*60),	{}]
+	//TODO THESE STILL NEED CHANGED BACK TO CORRECT
+	//east_tank_1
+	//east_ifv_1
 ];
 
 // input allowed crew classes for GROUND vehicles
@@ -125,8 +121,21 @@ AllowedAirCrew =
 
 // banned magazines
 VehBannedMagazines =
-[];
-
+[
+	"CUP_340rnd_TE1_Green_Tracer_30mmHEIF_2a42_m",
+	"gm_22Rnd_100x695mm_apfsds_t_bm8",
+	"gm_21Rnd_100x695mm_he_of412",
+	"gm_24Rnd_76x385mm_he_of350",
+	"gm_2000Rnd_23x152mm_hei_t_ofzt",
+	"CUP_30Rnd_122mmHE_D30_M",
+	"CUP_30Rnd_122mmWP_D30_M",
+	"CUP_30Rnd_122mmLASER_D30_M",
+	"CUP_30Rnd_122mmSMOKE_D30_M",
+	"CUP_30Rnd_122mmILLUM_D30_M",
+	"gm_11Rnd_100x695mm_he_of412",
+	"gm_15Rnd_100x695mm_apfsds_t_bm20",
+	"gm_10Rnd_100x695mm_heat_t_bk5m"
+];
 /*
 END USER CONFIG
 */
@@ -135,6 +144,35 @@ END USER CONFIG
 publicVariable "CCO_vehs";
 publicVariable "AllowedGroundCrew";
 publicVariable "AllowedAirCrew";
+
+SFP_fnc_giveAmmoTypes =
+{
+	params["_veh","_class"];
+	if (_class isEqualTo "gm_gc_army_t55am2b") then {
+		_veh removeMagazinesTurret ["gm_10Rnd_100x695mm_heat_t_bk5m", [0]];
+		_veh removeMagazinesTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
+			_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
+		["Eyo we should be reomving ammo"] remoteExec ["systemChat",0] ;
+		for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
+		{
+		_veh addMagazineTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
+
+		["Adding ammo"] remoteExec ["systemChat",0] ;
+		}
+	};
+	if(_class isEqualTo "cwr3_o_bmp2") then {
+
+		_veh removeMagazinesTurret ["CUP_340rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
+		_veh removeMagazinesTurret ["CUP_160rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
+
+		_veh addMagazineTurret ["CUP_340rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
+	};
+
+	if(_class isEqualTo "gm_gc_army_zsu234v1") then {
+		_veh removeMagazinesTurret ["gm_2000Rnd_23x152mm_hei_t_ofzt",[0]];
+	}
+
+};
 
 // adds handlers to vehicles that start respawn process and remove themselves
 JST_fnc_addVehRespawnHandlers =
@@ -163,6 +201,20 @@ JST_fnc_addVehRespawnHandlers =
 			[_unit, _vehArray] remoteExec ["JST_fnc_vehRespawn", 2];
 		}
 	];
+	//remove all banned ammo when reloaded by ammo truck
+	_veh addEventHandler
+	[
+		"Reloaded",
+		{
+			params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
+			private _class = typeOf _unit;
+			// [_unit,_class] spawn SFP_fnc_giveAmmoTypes;
+			{
+				_unit removeMagazinesTurret [_x, [0]];
+			} forEach VehBannedMagazines;
+		}
+	];
+
 	// deleted: remove all handlers, start respawn loop
 	_veh addEventHandler
 	[
@@ -301,6 +353,10 @@ JST_fnc_vehRespawn =
 	{
 		_unitVar removeMagazinesTurret [_x, [0]];
 	} forEach VehBannedMagazines;
+	private _class = typeOf _unitVar;
+
+	[_unitVar,_class] remoteExec ["SFP_fnc_giveAmmoTypes",2];
+
 	// recreate attached objects, if any
 	if ((count _attObjs) > 0) then
 	{
@@ -368,21 +424,9 @@ waitUntil {time > 3};
 	// store data on vehicle
 	private _vehArray = [_unitVar, _restricted, _time, _pos, [_vDir, _vUp], _class, _config, _name, _attObjs, _fnc, _sideLocInfo];
 	_unitVar setVariable ["CCO_vehArray", _vehArray, true];
-	// TBA CCE Tank HE catch
-	if (_class isEqualTo "gm_gc_army_t55") then {
-		_unitVar removeMagazinesTurret ["gm_21Rnd_100x695mm_he_of412",[0]];
-		for [{ _i = 0 }, { _i < 4 }, { _i = _i + 1 }] do
-		{
-			_unitVar addMagazineTurret ["gm_1Rnd_100x695mm_he_of412", [0]];
-		};
-	};
-	if (_class isEqualTo "gm_gc_army_pt76b") then {
-		_unitVar removeMagazinesTurret ["gm_24Rnd_76x385mm_he_of350",[0]];
-		for [{ _i = 0 }, { _i < 3 }, { _i = _i + 1 }] do
-		{
-			_unitVar addMagazineTurret ["gm_1Rnd_76x385mm_he_of350", [0]];
-		};
-	};
+
+	[_unitVar,_class] spawn SFP_fnc_giveAmmoTypes;
+
 	// Remove banned magazines
 	{
 		_unitVar removeMagazinesTurret [_x, [0]];
@@ -391,6 +435,7 @@ waitUntil {time > 3};
 	[_unitVar] spawn _fnc;
 	// add handlers
 	[_unitVar] spawn JST_fnc_addVehRespawnHandlers;
+
 	// short sleep to avoid overload
 	UIsleep 0.25;
 } forEach CCO_vehs;

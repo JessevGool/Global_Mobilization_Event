@@ -108,7 +108,7 @@ KPCF_items = [
     "ACE_morphine",
     "ACE_epinephrine",
     "ACE_adenosine",
-    "gm_repairkit_01",
+    "gm_repairkit_01"
 
 ];
 
