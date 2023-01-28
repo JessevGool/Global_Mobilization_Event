@@ -151,7 +151,7 @@ SFP_fnc_giveAmmoTypes =
 	if (_class isEqualTo "gm_gc_army_t55am2b") then {
 		_veh removeMagazinesTurret ["gm_10Rnd_100x695mm_heat_t_bk5m", [0]];
 		_veh removeMagazinesTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
-		_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
+			_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
 		["Eyo we should be reomving ammo"] remoteExec ["systemChat",0] ;
 		for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
 		{
@@ -165,7 +165,7 @@ SFP_fnc_giveAmmoTypes =
 		_veh removeMagazinesTurret ["CUP_340rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
 		_veh removeMagazinesTurret ["CUP_160rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
 
-		_veh addMagazineTurret ["CUP_160rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
+		_veh addMagazineTurret ["CUP_340rnd_TE1_Green_Tracer_30mmAPBC_2a42_m",[0]];
 	};
 
 	if(_class isEqualTo "gm_gc_army_zsu234v1") then {
