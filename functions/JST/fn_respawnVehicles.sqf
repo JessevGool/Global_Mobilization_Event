@@ -91,7 +91,9 @@ CCO_vehs =
 	[east_truck_repair,	false,	(5*60),	{}],
 	[east_ifv_1,	true,	(0.5*60),	{}],
 	[east_ifv_2,	true,	(15*60),	{}]
-
+	//TODO THESE STILL NEED CHANGED BACK TO CORRECT
+	//east_tank_1
+	//east_ifv_1
 ];
 
 // input allowed crew classes for GROUND vehicles
@@ -199,7 +201,6 @@ JST_fnc_addVehRespawnHandlers =
 			[_unit, _vehArray] remoteExec ["JST_fnc_vehRespawn", 2];
 		}
 	];
-	//merge
 	//remove all banned ammo when reloaded by ammo truck
 	_veh addEventHandler
 	[
