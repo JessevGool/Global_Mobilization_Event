@@ -434,13 +434,13 @@ class vicc : Fic_Soldier_Carbine
   headgear[] = {CREW_HELMET};
   vest[] = {CAMO_VEST_CREW};
   magazines[] = {CARBINE_MAG, CREW_GRENADES_BLU};
-  backpackItems[] = {SIDE_KEY, RADIO_LR, RADIO_SR};
+  backpackItems[] = {SIDE_KEY, RADIO_LR, RADIO_SR, BASE_ARTILLERY};
   linkedItems[] = {LINKED, LEADER_LINKED, BINOS};
   items[] += {BASE_MEDICAL};
 };
 class vicd : vicc
 { // Repair Specialist
-  backpackItems[] = {"gm_repairkit_01", SIDE_KEY};
+  backpackItems[] = {"gm_repairkit_01", SIDE_KEY, BASE_ARTILLERY};
   linkedItems[] = {LINKED, LEADER_LINKED};
 };
 class vicl : vicc

@@ -357,8 +357,8 @@ class hatg: rifleman {// HAT Gunner
 };
 class hatag: rifleman {// HAT Spotter
   backpack[] = {CAMO_BACKPACK};
-  items[] += {RADIO_SR};
   linkedItems[] += {BINOS};
+  items[] += {RADIO_LR,RADIO_SR};
 };
 
 //SAM

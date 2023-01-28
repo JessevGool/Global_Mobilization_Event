@@ -77,23 +77,25 @@ CCO_vehs =
 	[west_truck_5,	false,	(5*60),		{}],
 	[west_helo_1,	true,	(15*60),	{}],
 	[west_helo_2,	true,	(15*60),	{}],
+	[west_helo_3,	true,	(25*60),	{}],
 	[west_arty_1,	true,	(30*60),	{}],
 	[west_arty_2,	true,	(30*60),	{}],
+
 	//EAST
+	[east_aa_1,		true,	(20*60),	{}],
+	[east_helo_1,	true,	(15*60),	{}],
+	[east_arty_1,	false,	(30*60),	{}],
 	[east_469_1,	false,	(5*60),		{}],
 	[east_469_2,	false,	(5*60),		{}],
-	[east_tank_1,	true,	(0.5*60),	{}],
-	[east_tank_2,	true,	(15*60),	{}],
+	[east_tank_1,	true,	(20*60),	{}],
+	[east_tank_2,	true,	(20*60),	{}],
 	[east_truck_1,	false,	(5*60),		{}],
 	[east_truck_2,	false,	(5*60),		{}],
 	[east_truck_3,	false,	(5*60),		{}],
 	[east_truck_4,	false,	(5*60),		{}],
 	[east_truck_repair,	false,	(5*60),	{}],
-	[east_ifv_1,	true,	(0.5*60),	{}],
+	[east_ifv_1,	true,	(15*60),	{}],
 	[east_ifv_2,	true,	(15*60),	{}]
-	//TODO THESE STILL NEED CHANGED BACK TO CORRECT
-	//east_tank_1
-	//east_ifv_1
 ];
 
 // input allowed crew classes for GROUND vehicles
@@ -105,7 +107,8 @@ AllowedGroundCrew =
 
 	"potato_e_vicc",
 	"potato_e_vicl",
-	"potato_e_vicd"
+	"potato_e_vicd",
+	"potato_e_hatg" // Allow hat gunner to sit in the commander seat of the BMP
 ];
 // input allowed crew classes for AIR vehicles
 AllowedAirCrew =
@@ -139,7 +142,6 @@ VehBannedMagazines =
 /*
 END USER CONFIG
 */
-
 // temp workaround until I find a smarter, server-only way of handling crew restrictions
 publicVariable "CCO_vehs";
 publicVariable "AllowedGroundCrew";
@@ -151,13 +153,11 @@ SFP_fnc_giveAmmoTypes =
 	if (_class isEqualTo "gm_gc_army_t55am2b") then {
 		_veh removeMagazinesTurret ["gm_10Rnd_100x695mm_heat_t_bk5m", [0]];
 		_veh removeMagazinesTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
-			_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
-		["Eyo we should be reomving ammo"] remoteExec ["systemChat",0] ;
+		_veh removeMagazinesTurret ["gm_11Rnd_100x695mm_he_of412", [0]];
 		for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
 		{
 		_veh addMagazineTurret ["gm_20Rnd_100x695mm_apfsds_t_bm25", [0]];
 
-		["Adding ammo"] remoteExec ["systemChat",0] ;
 		}
 	};
 	if(_class isEqualTo "cwr3_o_bmp2") then {
@@ -169,9 +169,15 @@ SFP_fnc_giveAmmoTypes =
 	};
 
 	if(_class isEqualTo "gm_gc_army_zsu234v1") then {
+		_veh removeMagazinesTurret ["gm_500Rnd_23x152mm_api_t_bzt",[0]];
 		_veh removeMagazinesTurret ["gm_2000Rnd_23x152mm_hei_t_ofzt",[0]];
-	}
-
+		for [{ _i = 0 }, { _i < 2 }, { _i = _i + 1 }] do 
+		{
+		_veh addMagazineTurret ["gm_500Rnd_23x152mm_api_t_bzt", [0]];
+		}
+	};
+	//IM A GOD
+	_veh setVariable ["ace_rearm_scriptedLoadout", true, true];
 };
 
 // adds handlers to vehicles that start respawn process and remove themselves
@@ -424,9 +430,9 @@ waitUntil {time > 3};
 	// store data on vehicle
 	private _vehArray = [_unitVar, _restricted, _time, _pos, [_vDir, _vUp], _class, _config, _name, _attObjs, _fnc, _sideLocInfo];
 	_unitVar setVariable ["CCO_vehArray", _vehArray, true];
-
+	
 	[_unitVar,_class] spawn SFP_fnc_giveAmmoTypes;
-
+	
 	// Remove banned magazines
 	{
 		_unitVar removeMagazinesTurret [_x, [0]];
