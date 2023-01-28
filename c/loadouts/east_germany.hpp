@@ -142,7 +142,7 @@
 // Ammo
 #define AMMO_RIFLE "gm_30Rnd_762x39mm_B_T_57N231P_ak47_blk:400"
 #define AMMO_AR "gm_100Rnd_762x54mmR_B_T_7t2_pk_grn:200"
-#define AMMO_AT "gm_1Rnd_40mm_heat_pg7vl_rpg7:60"
+#define AMMO_AT "CUP_PG7VL_M:60" , "CUP_OG7_M:30"
 #define AMMO_GL "1Rnd_HE_Grenade_shell:100" , "1Rnd_Smoke_Grenade_shell:100" , "1Rnd_SmokeRed_Grenade_shell:50"
 #define AMMO_GRENADE "gm_handgrenade_frag_rgd5:60" , "SmokeShell:100"
 #define AMMO_MEDICAL "ACE_packingBandage:250","ACE_elasticBandage:250","ACE_splint:25"
